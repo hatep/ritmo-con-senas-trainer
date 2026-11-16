@@ -1,0 +1,457 @@
+﻿/* hands.css - Dorsal Hand SVG styling, visible proximal phalanx during curl, and bounded knuckle debug lines */
+.hands-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  user-select: none;
+}
+
+.dual-hands-stage {
+  gap: 0;
+}
+
+.dual-hands-stage .hand-right {
+  margin-left: var(--hands-overlap, 0px);
+}
+
+.single-hand-stage {
+  gap: 0;
+}
+
+.hand-svg {
+  width: 100%;
+  max-width: var(--hand-max-width, 295px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.55));
+  flex-shrink: 0;
+}
+
+.finger-container {
+  cursor: pointer;
+}
+
+/* 
+   Dorsal Phalanx Articulation:
+   - When extended: All phalanxes stand tall and vertical.
+   - When curled (0): 
+     * The PROXIMAL phalanx remains upright and visible (matching reference photos)!
+     * Only the middle and distal phalanxes fold down and foreshorten at PIP/DIP joints!
+*/
+.proximal-joint {
+  transition: transform 120ms cubic-bezier(0.35, 0, 0.15, 1);
+  will-change: transform;
+}
+
+.middle-joint {
+  transition: transform 120ms cubic-bezier(0.35, 0, 0.15, 1), opacity 120ms ease;
+  will-change: transform, opacity;
+}
+
+.distal-joint {
+  transition: transform 120ms cubic-bezier(0.35, 0, 0.15, 1), opacity 120ms ease;
+  will-change: transform, opacity;
+}
+
+.folded-knuckle-dome {
+  transition: opacity 120ms ease;
+}
+
+.knuckle-shadow {
+  fill: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* EXTENDED STATE (1) */
+
+.finger-extended .proximal-joint {
+  transform: translateY(0);
+}
+
+.finger-extended .middle-joint {
+  transform: translateY(0) scaleY(1);
+  opacity: 1;
+}
+
+.finger-extended .distal-joint {
+  transform: translateY(0) scaleY(1);
+  opacity: 1;
+}
+
+.finger-extended .folded-knuckle-dome {
+  opacity: 0;
+}
+
+/* CURLED STATE (0) - Proximal phalanx remains clearly visible! */
+
+.finger-curled .proximal-joint {
+  transform: translateY(4px); /* Very subtle settle down, stays upright */
+}
+
+.finger-curled .middle-joint {
+
+  /* Folds away behind knuckle dome; hidden to avoid dark overlapping discoloration */
+  transform: scaleY(0.1) translateY(45px);
+  opacity: 0;
+}
+
+.finger-curled .distal-joint {
+
+  /* Folds completely against palm, hidden behind knuckle */
+  transform: scaleY(0.1) translateY(45px);
+  opacity: 0;
+}
+
+.finger-curled .folded-knuckle-dome {
+  opacity: 1;
+}
+
+/* Fingernails - Clearly large, distinct dorsal cuticles & highlights */
+.fingernail-path {
+  fill: url(#nail-grad);
+  stroke: #aa7c70;
+  stroke-width: 1.5;
+  transition: opacity 120ms ease;
+}
+
+.finger-curled .fingernail-path {
+  opacity: 0;
+}
+
+/* Finger Labels (Solfège / Numbers) */
+.finger-label-wrap {
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.finger-label-wrap.hidden {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.label-badge-bg {
+  fill: #1e293b;
+  stroke: #475569;
+  stroke-width: 1.5;
+  transition: fill 150ms ease, stroke 150ms ease;
+}
+
+.finger-extended .label-badge-bg {
+  fill: #0284c7;
+  stroke: #38bdf8;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.65));
+}
+
+.finger-curled .label-badge-bg {
+  fill: #334155;
+  stroke: #475569;
+  opacity: 0.65;
+}
+
+.finger-label-text {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  fill: #f8fafc;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Knuckle Timeline & Bounded Debug Segments
+   ========================================================================== */
+.timeline-section {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 38px;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Debug Bounded Line Segments: Only visible when debug option is ON */
+.debug-line-segment {
+  position: absolute;
+  top: 14px;
+  height: 2px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.debug-line-segment.debug-visible {
+  background: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+/* Knuckle Tick Markers (Visible in Debug) */
+.debug-knuckle-tick {
+  position: absolute;
+  top: 5px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.debug-knuckle-tick.debug-visible {
+  opacity: 1;
+}
+
+.tick-notch {
+  width: 2px;
+  height: 18px;
+  background: #38bdf8;
+  border-radius: 1px;
+}
+
+.tick-caption {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-top: 2px;
+  font-family: monospace;
+}
+
+/* Dynamic Feedback Dots */
+.feedback-dot {
+  position: absolute;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, 0) scale(1.3);
+  pointer-events: none;
+  z-index: 25;
+  box-shadow: 0 0 12px currentColor;
+  animation: dot-impact 1.4s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-dot svg {
+  display: block;
+  pointer-events: none;
+}
+
+.feedback-dot.perfect {
+  background-color: #22c55e;
+  color: #22c55e;
+}
+
+.feedback-dot.early,
+.feedback-dot.late {
+  background-color: #f97316;
+  color: #f97316;
+}
+
+.feedback-dot.error {
+  background-color: #ef4444;
+  color: #ef4444;
+}
+
+.feedback-dot.demo-tap {
+  background-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 14px #38bdf8;
+}
+
+@keyframes dot-impact {
+  0% {
+    transform: translate(-50%, 0) scale(1.6);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate(-50%, 0) scale(1.0);
+    opacity: 0.95;
+  }
+
+  80% {
+    transform: translate(-50%, 0) scale(0.9);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-50%, 0) scale(0.4);
+    opacity: 0;
+  }
+
+}
+
+/* ==========================================================================
+   Conductor Gestures (Purely Vertical)
+   Physics:
+     Pure Parabolic Apex: Models the harmonic symmetrical arc of a thrown projectile.
+     - Activation Gesture: Runs on Beat 2 of Demo.
+       * Fast Tempos (>= Cutoff, e.g. >= 100): Starts at Ta (0%), apex at Di (36%), falls to ictus at Beat 1 (72%), gentle rebound (-18%).
+       * Slow Tempos (< Cutoff, e.g. < 100): Starts at Di (36%), apex at Mi (54%), falls to ictus at Beat 1 (72%), gentle rebound (-18%).
+     - Beat Pulse Gesture: Runs on every beat (Demo & Imitate).
+       * Fast Tempos: Subtle dip at Ta, crest at Di, lands at Beat arrival (72%) with ZERO rebound.
+       * Slow Tempos: Starts at Di, subtle crest at Mi, lands at Beat arrival (72%) with ZERO rebound.
+   ========================================================================== */
+#hands-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  will-change: transform, margin-top;
+  transform: translateY(0);
+}
+
+/* Activation Gesture: Fast Tempos (>= Cutoff BPM, starts at Ta) */
+
+@keyframes conductor-gesture-activation {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+
+  14% {
+    transform: translateY(calc(0.15 * var(--conductor-lift, 95px)));
+    animation-timing-function: cubic-bezier(0.4, 0.4, 0.5, 1);
+  }
+
+  36% {
+    transform: translateY(calc(-1 * var(--conductor-lift, 95px)));
+    animation-timing-function: cubic-bezier(0.3, 0.4, 0.7, 0.85); /* Pure Parabolic Apex */
+  }
+
+  46% {
+    transform: translateY(calc(-0.84 * var(--conductor-lift, 95px)));
+    animation-timing-function: cubic-bezier(0.4, 0.2, 0.85, 0.8);
+  }
+
+  58% {
+    transform: translateY(calc(-0.46 * var(--conductor-lift, 95px)));
+    animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.8);
+  }
+
+  72% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+  }
+
+  79% {
+    transform: translateY(calc(-0.18 * var(--conductor-lift, 95px))); /* Rebound reduced by 25% (0.24 -> 0.18) */
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  88% {
+    transform: translateY(calc(-0.03 * var(--conductor-lift, 95px))); /* 0.04 -> 0.03 */
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+/* Activation Gesture: Slow Tempos (< Cutoff BPM, starts at Di) */
+
+@keyframes conductor-gesture-activation-late {
+  0% { transform: translateY(0); }
+  24% { transform: translateY(0); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  36% { transform: translateY(calc(0.15 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0.4, 0.5, 1); }
+  54% { transform: translateY(calc(-1 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.3, 0.4, 0.7, 0.85); }
+  59% { transform: translateY(calc(-0.80 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0.2, 0.85, 0.8); }
+  65% { transform: translateY(calc(-0.40 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.8); }
+  72% { transform: translateY(0); animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1); }
+  79% { transform: translateY(calc(-0.18 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  88% { transform: translateY(calc(-0.03 * var(--conductor-lift, 95px))); animation-timing-function: ease-out; }
+  100% { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   BINARY BEAT PULSE GESTURE (Locked to Hybrid Proposal 4: Micro-Dip & Floating Apex)
+   - Rests motionless at center 0% to 26%
+   - Micro-dip at Di 36% (10% depth)
+   - Floats to apex at 50%
+   - Option 12 late gravity terminal drop into 72% with 0% rebound
+   ========================================================================== */
+
+@keyframes conductor-beat-pulse {
+  0% { transform: translateY(0); }
+  26% { transform: translateY(0); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  36% { transform: translateY(calc(0.10 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.4, 0.4, 0.5, 1); }
+  50% { transform: translateY(calc(-1 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.75, 0, 0.95, 0.35); }
+  62% { transform: translateY(calc(-0.75 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.9, 0, 1, 0.35); }
+  72% { transform: translateY(0); animation-timing-function: ease-out; }
+  100% { transform: translateY(0); }
+}
+
+.conductor-gesture-activation {
+  animation-name: conductor-gesture-activation;
+  animation-fill-mode: both;
+}
+
+.conductor-gesture-activation-late {
+  animation-name: conductor-gesture-activation-late;
+  animation-fill-mode: both;
+}
+
+.conductor-beat-pulse {
+  animation-name: conductor-beat-pulse;
+  animation-fill-mode: both;
+}
+
+/* ==========================================================================
+   TERNARY CONDUCTOR PROPOSALS (Pure Parabolic Apex)
+   Time map in ternary (arrival at 72%):
+     Ta = 0%
+     Ki = 24%
+     Da = 48%
+     Beat 1 arrival = 72%
+     Rebound crest = 79% (Activation only, -18% lift)
+     Settling = 88% (-3% lift)
+     Rest = 100% (0)
+   ========================================================================== */
+
+/* ==========================================================================
+   TERNARY CONDUCTOR GESTURES (Unified across all BPMs)
+   - Activation Gesture: Locked to Recommendation 3 (Ki dip -> Da crest -> 8% rebound)
+   - Beat Pulse Gesture: Pegged to --conductor-pulse-lift (6px), ZERO rebound
+   ========================================================================== */
+
+/* Ternary Activation Gesture (Number 3 with 8% rebound, uses --conductor-lift ~95px) */
+
+@keyframes conductor-ternary-activation {
+  0% { transform: translateY(0); }
+  18% { transform: translateY(0); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  28% { transform: translateY(calc(0.15 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0.4, 0.5, 1); }
+  48% { transform: translateY(calc(-1 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.3, 0.4, 0.7, 0.85); }
+  56% { transform: translateY(calc(-0.75 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0.2, 0.85, 0.8); }
+  64% { transform: translateY(calc(-0.38 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.8); }
+  72% { transform: translateY(0); animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1); }
+  78% { transform: translateY(calc(-0.08 * var(--conductor-lift, 95px))); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  86% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* Ternary Beat Pulse (Micro-articulation pegged to --conductor-pulse-lift, 6px default, ZERO rebound) */
+
+@keyframes conductor-ternary-pulse {
+  0% { transform: translateY(0); }
+  18% { transform: translateY(0); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  28% { transform: translateY(calc(0.12 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.4, 0.4, 0.5, 1); }
+  48% { transform: translateY(calc(-1 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.3, 0.4, 0.7, 0.85); }
+  56% { transform: translateY(calc(-0.75 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.4, 0.2, 0.85, 0.8); }
+  64% { transform: translateY(calc(-0.38 * var(--conductor-pulse-lift, 6px))); animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.8); }
+  72% { transform: translateY(0); animation-timing-function: ease-out; }
+  100% { transform: translateY(0); }
+}
+
+/* Proposal Classes */
+.conductor-ternary-activation { animation-name: conductor-ternary-activation; animation-fill-mode: both; }
+.conductor-ternary-pulse { animation-name: conductor-ternary-pulse; animation-fill-mode: both; }
+.conductor-ternary-3 { animation-name: conductor-ternary-activation; animation-fill-mode: both; }
