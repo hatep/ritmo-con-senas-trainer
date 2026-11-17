@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,9 +6,9 @@
   <title>Ritmo Con Señas. Finger reading</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☝️</text></svg>">
   
-  <link rel="stylesheet" href="css/main.css?v=11">
-  <link rel="stylesheet" href="css/hands.css?v=11">
-  <link rel="stylesheet" href="css/debug.css?v=11">
+  <link rel="stylesheet" href="css/main.css?v=14">
+  <link rel="stylesheet" href="css/hands.css?v=17">
+  <link rel="stylesheet" href="css/debug.css?v=12">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +76,7 @@
       </div>
 
       <!-- Item 1: Practice / Répétition / Práctica (Top Setting!) -->
-      <div class="practice-mode-item" id="row-toggle-practice">
+      <div class="practice-mode-item" id="row-toggle-practice" title="Boucler jusqu'à réussite">
         <div class="practice-mode-info">
           <div class="practice-mode-title" id="lbl-practice-mode">Répétition</div>
           <div class="practice-mode-desc" id="lbl-practice-desc">Travaillez un rythme jusqu'à le réussir</div>
@@ -94,17 +94,17 @@
       <div class="setting-item">
         <label class="setting-item-label" id="lbl-mode">Mode</label>
         <div class="seg-control" id="ctrl-mode">
-          <button class="seg-btn active" data-val="imitate" id="btn-mode-imitate">Imiter</button>
-          <button class="seg-btn" data-val="continuous" id="btn-mode-continuous">Continu</button>
+          <button class="seg-btn active" data-val="imitate" id="btn-mode-imitate" title="2 temps d'écoute, 2 temps de jeu">Imiter</button>
+          <button class="seg-btn" data-val="continuous" id="btn-mode-continuous" title="Déchiffrage en continu">Continu</button>
         </div>
       </div>
 
       <div class="setting-item">
         <label class="setting-item-label" id="lbl-view">Vue</label>
         <div class="seg-control" id="ctrl-hand-count">
-          <button class="seg-btn" data-val="left" id="btn-view-left">Gauche</button>
-          <button class="seg-btn" data-val="right" id="btn-view-right">Droite</button>
-          <button class="seg-btn active" data-val="two" id="btn-view-two">Deux mains</button>
+          <button class="seg-btn" data-val="left" id="btn-view-left" title="Main gauche seule">Gauche</button>
+          <button class="seg-btn" data-val="right" id="btn-view-right" title="Main droite seule">Droite</button>
+          <button class="seg-btn active" data-val="two" id="btn-view-two" title="Coordination des deux mains">Deux mains</button>
         </div>
       </div>
 
@@ -232,10 +232,22 @@
       <div class="setting-item">
         <label class="setting-item-label" id="lbl-finger-labels">Noms des doigts</label>
         <div class="seg-control" id="ctrl-labels">
-          <button class="seg-btn active" data-val="solfege" id="btn-label-solfege">Solfège</button>
-          <button class="seg-btn" data-val="numbers" id="btn-label-numbers">1 2 3 4</button>
-          <button class="seg-btn" data-val="hidden" id="btn-label-erased">Masqué</button>
+          <button class="seg-btn active" data-val="solfege" id="btn-label-solfege" title="TaKaDiMi">Solfège</button>
+          <button class="seg-btn" data-val="numbers" id="btn-label-numbers" title="Numéro">1 2 3 4</button>
+          <button class="seg-btn" data-val="hidden" id="btn-label-erased" title="Sans repère">Masqué</button>
         </div>
+      </div>
+
+      <!-- Separator -->
+      <div class="drawer-divider"></div>
+
+      <!-- Device Latency Calibration -->
+      <div class="setting-item latency-setting-item">
+        <button id="btn-open-latency-modal" class="btn-latency-trigger" title="Tester et ajuster la latence audio de l'appareil">
+          <span class="latency-btn-icon">⏱️</span>
+          <span id="lbl-latency-test">Calibrer la latence</span>
+        </button>
+        <div class="latency-current-value" id="latency-current-display">Actuelle : 0 ms</div>
       </div>
 
     </div>
@@ -343,7 +355,57 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=11"></script>
+  <!-- Device Latency Calibration Modal -->
+  <div id="latency-modal-backdrop" class="modal-backdrop hidden"></div>
+  <div id="latency-modal" class="latency-modal hidden" role="dialog" aria-modal="true">
+    <div class="latency-modal-header">
+      <div class="latency-modal-title-wrap">
+        <span class="latency-title-icon">⏱️</span>
+        <h2 id="latency-modal-title">Calibrage de la latence</h2>
+      </div>
+      <button id="btn-close-latency" class="btn-latency-close" title="Fermer (Esc)">&times;</button>
+    </div>
+    
+    <div class="latency-modal-body">
+      <!-- Beat visual pulsing indicator -->
+      <div class="latency-beat-indicator-wrap">
+        <div id="latency-beat-dot" class="latency-beat-dot" title="Métronome 60 BPM"></div>
+        <span class="latency-bpm-tag">60 BPM</span>
+      </div>
+
+      <!-- Explanatory dynamic instruction text -->
+      <p id="latency-instruction-text" class="latency-instruction-text">
+        Le métronome bat à 60 BPM. Cliquez sur TAP en rythme 8 fois pour mesurer la latence de votre appareil.
+      </p>
+
+      <!-- Central Big TAP Button -->
+      <div class="latency-tap-area">
+        <button id="btn-latency-tap" class="btn-latency-tap" type="button">
+          <span class="latency-tap-label">TAP</span>
+        </button>
+        <div class="latency-tap-subhint" id="latency-tap-subhint">Vous pouvez aussi appuyer sur la touche <kbd>Espace</kbd></div>
+      </div>
+
+      <!-- Live Offset Output (Displayed from 4th tap onwards, invisible placeholder before) -->
+      <div id="latency-result-card" class="latency-result-card">
+        <span class="latency-result-label" id="latency-result-label">Latence détectée :</span>
+        <span class="latency-result-value" id="latency-result-val">-- ms</span>
+      </div>
+
+      <!-- Educational latency explainer note -->
+      <div class="latency-explainer-text" id="latency-explainer-display">
+        Chaque écran et casque a un léger temps de réaction. Calibrer permet d’aligner vos oreilles, vos doigts et le jeu sur la même seconde.
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions: Restart on left, Let's Go ! on right (invisible placeholder before countdown ends) -->
+    <div class="latency-modal-footer">
+      <button id="btn-latency-restart" class="btn-latency-secondary">Recommencer</button>
+      <button id="btn-latency-confirm" class="btn-latency-primary">C'est parti !</button>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=23"></script>
 
 </body>
 </html>

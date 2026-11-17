@@ -82,6 +82,9 @@
       scoreTextDiffPerfect: 'Prêt pour la suite ? Passez à la <a href="#" class="score-interactive-link" data-action="difficulty">difficulté</a> supérieure !',
       scoreTextAdvanced: "Vous tenez un très bon niveau sur les rythmes les plus exigeants.",
       scoreTextAdvancedPerfect: "Une précision impeccable du début à la fin de la série.",
+      // Normal Mode End-of-Exercise recommendations
+      scoreTextCalibrationAhead: 'Vous semblez frapper systématiquement en avance. Pensez à <a href="#" class="score-interactive-link" data-action="calibrate">calibrer la latence</a> de votre appareil.',
+      scoreTextCalibrationBehind: 'Vous semblez frapper systématiquement en retard. Pensez à <a href="#" class="score-interactive-link" data-action="calibrate">calibrer la latence</a> de votre appareil.',
       btnRetry: "Réessayer",
       btnClose: "Fermer",
       btnAdd: "Ajouter",
@@ -93,7 +96,27 @@
       helpTooltip: "Tutoriel & Histoire",
       emptyPlaylist: "Aucun motif pour l'instant. Cliquez sur les doigts puis appuyez sur +",
       chipTitle: "Glisser pour réordonner • Cliquer pour charger",
-      removePatternTooltip: "Supprimer le motif"
+      removePatternTooltip: "Supprimer le motif",
+      tooltipPracticeToggle: "Boucler jusqu'à réussite",
+      tooltipModeImitate: "2 temps d'écoute, 2 temps de jeu",
+      tooltipModeContinuous: "Déchiffrage en continu",
+      tooltipViewLeft: "Main gauche seule",
+      tooltipViewRight: "Main droite seule",
+      tooltipViewTwo: "Coordination des deux mains",
+      tooltipLabelSolfege: "TaKaDiMi",
+      tooltipLabelNumbers: "Numéro",
+      tooltipLabelHidden: "Sans repère",
+      latencySettingBtn: "Calibrer la latence",
+      latencyCurrentPrefix: "Actuelle : ",
+      latencyModalTitle: "Calibrage de la latence",
+      latencyInitialHelp: "Le métronome bat à 60 BPM. Cliquez sur TAP en rythme 8 fois pour mesurer la latence de votre appareil.",
+      latencyRemainingHelp: (count) => `Cliquez encore ${count} fois`,
+      latencyFinishedHelp: "Vous pouvez continuer à cliquer sur TAP pour affiner la précision du résultat.",
+      latencyDetectedLabel: "Latence détectée :",
+      latencyBtnTap: "TAP",
+      latencyBtnRestart: "Recommencer",
+      latencyBtnLetsGo: "C'est parti !",
+      latencyExplainer: "Chaque écran et casque a un léger temps de réaction. Calibrer permet d’aligner vos oreilles, vos doigts et le jeu sur la même seconde."
     },
     es: {
       drawerTitle: "CONFIGURACIÓN",
@@ -141,6 +164,8 @@
       scoreTextDiffPerfect: '¿Listo para más? ¡Pasa a la siguiente <a href="#" class="score-interactive-link" data-action="difficulty">dificultad</a>!',
       scoreTextAdvanced: "Mantienes un nivel muy sólido en los ritmos más exigentes.",
       scoreTextAdvancedPerfect: "Precisión impecable de principio a fin.",
+      scoreTextCalibrationAhead: 'Parece que estás tocando sistemáticamente adelantado. Recuerda que puedes <a href="#" class="score-interactive-link" data-action="calibrate">calibrar la latencia</a> de tu dispositivo.',
+      scoreTextCalibrationBehind: 'Parece que estás tocando sistemáticamente retrasado. Recuerda que puedes <a href="#" class="score-interactive-link" data-action="calibrate">calibrar la latencia</a> de tu dispositivo.',
       btnRetry: "Reintentar",
       btnClose: "Cerrar",
       btnAdd: "Añadir",
@@ -152,7 +177,27 @@
       helpTooltip: "Tutorial e Historia",
       emptyPlaylist: "Aún no hay patrones. Haz clic en los dedos y presiona +",
       chipTitle: "Arrastrar para reordenar • Clic para cargar",
-      removePatternTooltip: "Eliminar patrón"
+      removePatternTooltip: "Eliminar patrón",
+      tooltipPracticeToggle: "Repetir hasta lograrlo",
+      tooltipModeImitate: "2 tiempos escucha, 2 tiempos toque",
+      tooltipModeContinuous: "Lectura continua sin pausa",
+      tooltipViewLeft: "Solo mano izquierda",
+      tooltipViewRight: "Solo mano derecha",
+      tooltipViewTwo: "Ambas manos juntas",
+      tooltipLabelSolfege: "TaKaDiMi",
+      tooltipLabelNumbers: "Números",
+      tooltipLabelHidden: "Sin marcas",
+      latencySettingBtn: "Calibrar latencia",
+      latencyCurrentPrefix: "Actual: ",
+      latencyModalTitle: "Calibración de latencia",
+      latencyInitialHelp: "El metrónomo late a 60 BPM. Haz clic en TAP al ritmo 8 veces para medir la latencia de tu dispositivo.",
+      latencyRemainingHelp: (count) => `Haz clic ${count} veces más`,
+      latencyFinishedHelp: "Puedes seguir presionando TAP para afinar la precisión del resultado.",
+      latencyDetectedLabel: "Latencia detectada:",
+      latencyBtnTap: "TAP",
+      latencyBtnRestart: "Reiniciar",
+      latencyBtnLetsGo: "¡Vamos!",
+      latencyExplainer: "Cada pantalla y auricular tiene un breve tiempo de reacción. Calibrar permite alinear tus oídos, tus dedos y el juego en el mismo segundo."
     },
     en: {
       drawerTitle: "SETTINGS",
@@ -200,6 +245,8 @@
       scoreTextDiffPerfect: 'Ready for more? Increase the <a href="#" class="score-interactive-link" data-action="difficulty">difficulty</a>!',
       scoreTextAdvanced: "You have a strong grasp on the most demanding patterns.",
       scoreTextAdvancedPerfect: "Impeccable timing from start to finish.",
+      scoreTextCalibrationAhead: 'You seem to be tapping consistently ahead of time. You might want to <a href="#" class="score-interactive-link" data-action="calibrate">calibrate device latency</a>.',
+      scoreTextCalibrationBehind: 'You seem to be tapping consistently behind time. You might want to <a href="#" class="score-interactive-link" data-action="calibrate">calibrate device latency</a>.',
       btnRetry: "Retry",
       btnClose: "Close",
       btnAdd: "Add",
@@ -211,7 +258,27 @@
       helpTooltip: "Tutorial & History",
       emptyPlaylist: "No patterns yet. Click fingers to shape rhythm, then press +",
       chipTitle: "Drag to reorder • Click to load",
-      removePatternTooltip: "Remove pattern"
+      removePatternTooltip: "Remove pattern",
+      tooltipPracticeToggle: "Loop until mastered",
+      tooltipModeImitate: "2 beats listen, 2 beats tap",
+      tooltipModeContinuous: "Non-stop sight-reading",
+      tooltipViewLeft: "Left hand only",
+      tooltipViewRight: "Right hand only",
+      tooltipViewTwo: "Both hands together",
+      tooltipLabelSolfege: "TaKaDiMi",
+      tooltipLabelNumbers: "Numbers",
+      tooltipLabelHidden: "No labels",
+      latencySettingBtn: "Calibrate latency",
+      latencyCurrentPrefix: "Current: ",
+      latencyModalTitle: "Latency Calibration",
+      latencyInitialHelp: "The metronome runs at 60 BPM. Tap in rhythm 8 times to measure your device's latency.",
+      latencyRemainingHelp: (count) => `Click ${count} more times`,
+      latencyFinishedHelp: "You can keep on pressing TAP to get a more accurate result.",
+      latencyDetectedLabel: "Detected latency:",
+      latencyBtnTap: "TAP",
+      latencyBtnRestart: "Restart",
+      latencyBtnLetsGo: "Let's Go !",
+      latencyExplainer: "Every screen and headphone has a tiny reaction time. Calibrating aligns your ears, fingers, and the game on the exact same second."
     }
   };
 
@@ -234,7 +301,8 @@
       this.isHearRhythmEnabled = true;
 
       this.metronomeSound = 'bass-tom'; // Bass-tom + harmonic stick attack
-      this.subdivisionSound = 'wood-tap'; // Wood tap as preferred by user
+      this.subdivisionSound = 'shaker'; // Percussion Shaker as default
+      this.imitateSound = 'handclap'; // Default sound when listening in imitate mode
       this.tapSound = 'bongo'; // Bongo slap as preferred by user
     }
 
@@ -518,17 +586,171 @@
       if (!this.ctx) return;
       const t = Math.max(time, this.ctx.currentTime);
       const dest = this.demoGain || this.masterGain;
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(480, t);
-      osc.frequency.exponentialRampToValueAtTime(140, t + 0.07);
-      gain.gain.setValueAtTime(0.9, t);
-      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.075);
-      osc.connect(gain);
-      gain.connect(dest);
-      osc.start(t);
-      osc.stop(t + 0.08);
+
+      switch (this.imitateSound) {
+        case 'woodblock': {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(1100, t);
+          filter.Q.setValueAtTime(4.0, t);
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(800, t);
+          osc.frequency.exponentialRampToValueAtTime(160, t + 0.05);
+          gain.gain.setValueAtTime(0.9, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(dest);
+          osc.start(t);
+          osc.stop(t + 0.065);
+          break;
+        }
+
+        case 'marimba': {
+          const osc = this.ctx.createOscillator();
+          const osc2 = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, t); // C5
+          osc2.type = 'sine';
+          osc2.frequency.setValueAtTime(1569.75, t); // C5 overtone
+          gain.gain.setValueAtTime(0.85, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.12);
+          osc.connect(gain);
+          osc2.connect(gain);
+          gain.connect(dest);
+          osc.start(t);
+          osc2.start(t);
+          osc.stop(t + 0.13);
+          osc2.stop(t + 0.13);
+          break;
+        }
+
+        case 'bongo': {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(450, t);
+          osc.frequency.exponentialRampToValueAtTime(170, t + 0.06);
+          gain.gain.setValueAtTime(0.9, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.07);
+          osc.connect(gain);
+          gain.connect(dest);
+          osc.start(t);
+          osc.stop(t + 0.075);
+          break;
+        }
+
+        case 'clave': {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(2450, t);
+          filter.Q.setValueAtTime(12.0, t);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(2450, t);
+          gain.gain.setValueAtTime(0.85, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.045);
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(dest);
+          osc.start(t);
+          osc.stop(t + 0.05);
+          break;
+        }
+
+        case 'cowbell': {
+          const osc1 = this.ctx.createOscillator();
+          const osc2 = this.ctx.createOscillator();
+          const filter = this.ctx.createBiquadFilter();
+          const gain = this.ctx.createGain();
+          osc1.type = 'square';
+          osc2.type = 'square';
+          osc1.frequency.setValueAtTime(560, t);
+          osc2.frequency.setValueAtTime(820, t);
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(800, t);
+          filter.Q.setValueAtTime(5.0, t);
+          gain.gain.setValueAtTime(0.7, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.09);
+          osc1.connect(filter);
+          osc2.connect(filter);
+          filter.connect(gain);
+          gain.connect(dest);
+          osc1.start(t);
+          osc2.start(t);
+          osc1.stop(t + 0.1);
+          osc2.stop(t + 0.1);
+          break;
+        }
+
+        case 'rimshot': {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const bufferSize = Math.floor(this.ctx.sampleRate * 0.02);
+          const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+          const noise = this.ctx.createBufferSource();
+          noise.buffer = buffer;
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(2100, t);
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(600, t);
+          osc.frequency.exponentialRampToValueAtTime(180, t + 0.04);
+          gain.gain.setValueAtTime(0.85, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+          noise.connect(filter);
+          filter.connect(gain);
+          osc.connect(gain);
+          gain.connect(dest);
+          noise.start(t);
+          osc.start(t);
+          osc.stop(t + 0.055);
+          break;
+        }
+
+        case 'handclap': {
+          const bufferSize = Math.floor(this.ctx.sampleRate * 0.06);
+          const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+          const noise = this.ctx.createBufferSource();
+          noise.buffer = buffer;
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(1200, t);
+          filter.Q.setValueAtTime(1.8, t);
+          const gain = this.ctx.createGain();
+          gain.gain.setValueAtTime(0.8, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.065);
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(dest);
+          noise.start(t);
+          break;
+        }
+
+        case 'synth-blip':
+        default: {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(480, t);
+          osc.frequency.exponentialRampToValueAtTime(140, t + 0.07);
+          gain.gain.setValueAtTime(0.9, t);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.075);
+          osc.connect(gain);
+          gain.connect(dest);
+          osc.start(t);
+          osc.stop(t + 0.08);
+          break;
+        }
+      }
     }
 
     playUserTap() {
@@ -1031,7 +1253,7 @@
       this.repeatOnError = this.isPracticeMode;
       this.forceReshuffle = false;
 
-      this.thresholdPerfectMs = 35;
+      this.thresholdPerfectMs = 45;
       this.thresholdMaxMs = 85;
 
       // Normal Mode 10-Hand Exercise tracking
@@ -1044,7 +1266,7 @@
 
       // Real-time hardware audio latency compensation (ms)
       const savedLatency = localStorage.getItem('rcs_latency_offset');
-      this.latencyOffsetMs = savedLatency !== null ? parseInt(savedLatency, 10) : 35;
+      this.latencyOffsetMs = savedLatency !== null ? parseInt(savedLatency, 10) : 0;
 
       this.isRunning = false;
       this.timerId = null;
@@ -1067,15 +1289,15 @@
 
       // Conductor activation & beat pulse gesture settings
       this.conductorGestureAuto = localStorage.getItem('rcs_conductor_auto') !== 'false';
-      this.conductorLiftHeight = parseInt(localStorage.getItem('rcs_conductor_lift') || '95', 10);
+      this.conductorLiftHeight = parseInt(localStorage.getItem('rcs_conductor_lift') || '60', 10);
       this.conductorPulseLiftHeight = parseInt(localStorage.getItem('rcs_conductor_pulse_lift') || '6', 10);
       this.conductorPulseAuto = localStorage.getItem('rcs_conductor_pulse_auto') !== 'false';
       this.conductorPulseFastStyle = parseInt(localStorage.getItem('rcs_conductor_pulse_fast_style') || '1', 10); // 1..7
       this.conductorPulseStyle = parseInt(localStorage.getItem('rcs_conductor_pulse_style') || '1', 10); // 1..6 distinct pulse animation styles
       this.conductorTernaryProposal = parseInt(localStorage.getItem('rcs_conductor_ternary_proposal') || '3', 10); // 1..5 rebound tweak variations
       this.conductorBpmCutoff = parseInt(localStorage.getItem('rcs_conductor_cutoff') || '100', 10);
-      this.fingerTransitionSubSlow = parseFloat(localStorage.getItem('rcs_finger_transition_sub_slow') || '2.0'); // 3rd subdivision (0-indexed: 2.0 = Di / Da)
-      this.fingerTransitionSubFast = parseFloat(localStorage.getItem('rcs_finger_transition_sub_fast') || '0.0'); // 1st subdivision (0-indexed: 0.0 = Ta)
+      this.fingerTransitionSubSlow = parseFloat(localStorage.getItem('rcs_finger_transition_sub_slow') || '0.25'); // 3rd subdivision (0-indexed: 2.0 = Di / Da)
+      this.fingerTransitionSubFast = parseFloat(localStorage.getItem('rcs_finger_transition_sub_fast') || '0.25'); // 1st subdivision (0-indexed: 0.0 = Ta)
       this.onConductorGesture = null;
       this.onConductorCancel = null;
     }
@@ -1212,11 +1434,17 @@
       const initial = this.getNextSigns();
       this.cycles.set(0, { sign1: initial.sign1, sign2: initial.sign2, patternId: initial.id });
       this.handRenderer.applySigns(initial.sign1, initial.sign2);
+      this.prepareExpectedTargets(initial, 0);
 
       // In continuous mode, pre-generate cycle 1 immediately so lookahead finger transition is ready
       if (this.mode === 'continuous') {
-        const next1 = this.getNextSigns();
-        this.cycles.set(1, { sign1: next1.sign1, sign2: next1.sign2, patternId: next1.id });
+        if (!this.isPracticeMode) {
+          const next1 = this.getNextSigns();
+          this.cycles.set(1, { sign1: next1.sign1, sign2: next1.sign2, patternId: next1.id });
+        } else {
+          // In practice mode, cycle 1 starts as a repeat of cycle 0 until cycle 0 is played properly
+          this.cycles.set(1, { sign1: initial.sign1, sign2: initial.sign2, patternId: initial.id });
+        }
       }
 
       const startTime = audioEngine.getCurrentTime() + 0.08;
@@ -1275,6 +1503,17 @@
             }
           }, timeUntilBeat);
 
+          // Activation gesture on the preparatory beat right before exercise starts (beat -1, count 2)
+          if (globalBeat === -1 && this.conductorGestureAuto) {
+            const beatDurationMs = this.secondsPerBeat * 1000;
+            setTimeout(() => {
+              if (!this.isRunning) return;
+              if (this.onConductorGesture) {
+                this.onConductorGesture(beatDurationMs, 'activation', this.conductorLiftHeight);
+              }
+            }, timeUntilBeat);
+          }
+
           this.nextBeatTime += this.secondsPerBeat;
           this.scheduledBeatCount++;
           continue;
@@ -1289,6 +1528,7 @@
             if (this.onCountdown) {
               this.onCountdown(null);
             }
+            this.isCountingDown = false;
           }, timeUntilBeat);
         }
 
@@ -1298,58 +1538,44 @@
 
         if (this.mode === 'continuous') {
           // Continuous Sight-Reading Mode: 1 cycle = 1 measure
-          if (beatInCycle === 0 && globalBeat > 0) {
-            const prevCycle = cycleIdx - 1;
-            const hadError = this.hasError || this.measureErrors.has(prevCycle);
-            let allPerfect = true;
-            let expectedCount = 0;
-            for (const slot of this.expectedTargetSlots) {
-              if (slot.startsWith(`${prevCycle}_`)) {
-                expectedCount++;
-                if (!this.perfectTargetSlots.has(slot)) {
-                  allPerfect = false;
-                }
+          if (!this.isPracticeMode && globalBeat >= this.handCountGoal * beatsInCycle) {
+            // All 10 hands have been scheduled!
+            // Wait until the final measure (Hand 10, index 9) finishes playing in real time:
+            const finalEndTime = this.sessionStartTime + this.handCountGoal * (beatsInCycle * this.secondsPerBeat);
+            const timeUntilEnd = Math.max(0, (finalEndTime - audioEngine.getCurrentTime()) * 1000);
+            setTimeout(() => {
+              if (!this.isRunning || this.mode !== 'continuous') return;
+              const lastMeasure = this.handCountGoal - 1;
+              if (!this.exerciseResults.some(r => r.handIndex === lastMeasure + 1)) {
+                this.exerciseResults.push(this.evaluateContinuousMeasure(lastMeasure));
               }
-            }
-            const prevSucceeded = !hadError && (expectedCount > 0 ? allPerfect : true);
-
-            if (!this.isPracticeMode) {
-              this.exerciseResults.push({
-                handIndex: cycleIdx,
-                success: prevSucceeded
-              });
-
-              if (cycleIdx >= this.handCountGoal) {
-                const timeUntilEnd = Math.max(0, (this.nextBeatTime - audioEngine.getCurrentTime()) * 1000);
-                setTimeout(() => {
-                  if (!this.isRunning) return;
-                  this.stop();
-                  if (this.onExerciseComplete) {
-                    this.onExerciseComplete({
-                      total: this.handCountGoal,
-                      correct: this.exerciseResults.filter(r => r.success).length,
-                      details: [...this.exerciseResults]
-                    });
-                  }
-                }, timeUntilEnd);
-                return;
+              const allCurled = this.divisionMode === 'ternary' ? '000' : '0000';
+              this.handRenderer.applySigns(allCurled, allCurled);
+              this.stop();
+              if (this.onExerciseComplete) {
+                this.onExerciseComplete({
+                  total: this.handCountGoal,
+                  correct: this.exerciseResults.filter(r => r.success).length,
+                  details: [...this.exerciseResults]
+                });
               }
-            }
+            }, timeUntilEnd);
+            return;
           }
 
           if (!this.cycles.has(cycleIdx)) {
-            const next = this.getNextSigns();
-            this.cycles.set(cycleIdx, { sign1: next.sign1, sign2: next.sign2, patternId: next.id });
+            if (this.isPracticeMode && cycleIdx > 0) {
+              const prev = this.cycles.get(cycleIdx - 1);
+              this.cycles.set(cycleIdx, { sign1: prev.sign1, sign2: prev.sign2, patternId: prev.patternId });
+            } else {
+              const next = this.getNextSigns();
+              this.cycles.set(cycleIdx, { sign1: next.sign1, sign2: next.sign2, patternId: next.id });
+            }
           }
           if (!this.cycles.has(cycleIdx + 1)) {
-            const prevSigns = this.cycles.get(cycleIdx);
-            const failedSoFar = this.hasError || this.measureErrors.has(cycleIdx);
-            if (!this.forceReshuffle && this.isPracticeMode && this.repeatOnError && failedSoFar && prevSigns) {
-              this.cycles.set(cycleIdx + 1, {
-                sign1: prevSigns.sign1,
-                sign2: prevSigns.sign2,
-                patternId: prevSigns.patternId
-              });
+            if (this.isPracticeMode) {
+              const cur = this.cycles.get(cycleIdx);
+              this.cycles.set(cycleIdx + 1, { sign1: cur.sign1, sign2: cur.sign2, patternId: cur.patternId });
             } else {
               this.forceReshuffle = false;
               const nextLookahead = this.getNextSigns();
@@ -1373,11 +1599,11 @@
           // Transition to a brand new cycle (cycleIdx > 0 and beatInCycle === 0)
           if (beatInCycle === 0 && globalBeat > 0 && !this.cycles.has(cycleIdx)) {
             // VICTORY CONDITION:
-            // All active knuckles on all hands must be perfect (within 35ms).
+            // All active knuckles on all hands must be perfect (within 45ms).
             // Zero wrong taps, zero duplicate taps, zero missed notes, zero imperfect (orange) taps.
             const prevCycle = cycleIdx - 1;
             const prevSigns = this.cycles.get(prevCycle);
-            const hadError = this.hasError || this.measureErrors.has(prevCycle);
+            const hadError = this.measureErrors.has(prevCycle);
             let allPerfect = true;
             let expectedCount = 0;
             for (const slot of this.expectedTargetSlots) {
@@ -1400,6 +1626,8 @@
                 const timeUntilEnd = Math.max(0, (this.nextBeatTime - audioEngine.getCurrentTime()) * 1000);
                 setTimeout(() => {
                   if (!this.isRunning) return;
+                  const allCurled = this.divisionMode === 'ternary' ? '000' : '0000';
+                  this.handRenderer.applySigns(allCurled, allCurled);
                   this.stop();
                   if (this.onExerciseComplete) {
                     this.onExerciseComplete({
@@ -1510,8 +1738,8 @@
           const isSlow = this.bpm < cutoff;
           // Configurable transition timing in subdivisions (0-indexed: 0 = Ta, 1 = Ka/Ki, 2 = Di/Da, 3 = Mi)
           const chosenSub = isSlow 
-            ? (this.fingerTransitionSubSlow !== undefined ? this.fingerTransitionSubSlow : 2.0)
-            : (this.fingerTransitionSubFast !== undefined ? this.fingerTransitionSubFast : 0.0);
+            ? (this.fingerTransitionSubSlow !== undefined ? this.fingerTransitionSubSlow : 0.25)
+            : (this.fingerTransitionSubFast !== undefined ? this.fingerTransitionSubFast : 0.25);
           
           let transitionOffsetSec = 0;
           if (this.isTwoHands) {
@@ -1526,37 +1754,79 @@
           const fingerChangeTime = beatTime + transitionOffsetSec;
           const timeUntilFingerChange = Math.max(0, (fingerChangeTime - audioEngine.getCurrentTime()) * 1000);
 
+          const isLastMeasureOfNormalExercise = !this.isPracticeMode && (cycleIdx === this.handCountGoal - 1);
           const nextCycleSigns = this.cycles.get(cycleIdx + 1);
-          if (nextCycleSigns) {
+
+          if (isLastMeasureOfNormalExercise) {
+            // At the end of Measure 10, both hands always curl all fingers and do not activate
             setTimeout(() => {
               if (!this.isRunning || this.mode !== 'continuous') return;
-              // Transition visual fingers to next measure's gesture!
-              this.handRenderer.applySigns(nextCycleSigns.sign1, nextCycleSigns.sign2);
+              const allCurled = this.divisionMode === 'ternary' ? '000' : '0000';
+              this.handRenderer.applySigns(allCurled, allCurled);
             }, timeUntilFingerChange);
-          }
+          } else {
+            if (nextCycleSigns) {
+              setTimeout(() => {
+                if (!this.isRunning || this.mode !== 'continuous') return;
+                // Transition visual fingers to next measure's gesture (in Normal mode only)
+                if (!this.isPracticeMode) {
+                  this.handRenderer.applySigns(nextCycleSigns.sign1, nextCycleSigns.sign2);
+                }
+              }, timeUntilFingerChange);
+            }
 
-          // Conductor Activation Vertical Gesture on final beat leading into next measure downbeat
-          if (this.conductorGestureAuto) {
-            const beatDurationMs = this.secondsPerBeat * 1000;
-            const timeUntilGesture = Math.max(0, (beatTime - audioEngine.getCurrentTime()) * 1000);
+            // Conductor Activation Vertical Gesture on final beat leading into next measure downbeat
+            if (this.conductorGestureAuto) {
+              const beatDurationMs = this.secondsPerBeat * 1000;
+              const timeUntilGesture = Math.max(0, (beatTime - audioEngine.getCurrentTime()) * 1000);
+              setTimeout(() => {
+                if (!this.isRunning || this.mode !== 'continuous') return;
+                if (this.onConductorGesture) {
+                  this.onConductorGesture(beatDurationMs, 'activation', this.conductorLiftHeight);
+                }
+              }, timeUntilGesture);
+            }
+
+            // Pre-arm expected targets for next measure
+            const nextMeasureStart = beatTime + this.secondsPerBeat;
+            const earlyOpenTime = nextMeasureStart - (0.5 * subDuration);
+            const timeUntilEarlyOpen = Math.max(0, (earlyOpenTime - audioEngine.getCurrentTime()) * 1000);
             setTimeout(() => {
               if (!this.isRunning || this.mode !== 'continuous') return;
-              if (this.onConductorGesture) {
-                this.onConductorGesture(beatDurationMs, 'activation', this.conductorLiftHeight);
-              }
-            }, timeUntilGesture);
-          }
+              if (this.isPracticeMode) {
+                // In Practice Mode: Evaluate whether cycleIdx was played properly!
+                const evalResult = this.evaluateContinuousMeasure(cycleIdx);
+                const prevSigns = this.cycles.get(cycleIdx);
+                let targetSigns;
 
-          // Pre-arm expected targets for next measure
-          const nextMeasureStart = beatTime + this.secondsPerBeat;
-          const earlyOpenTime = nextMeasureStart - (0.5 * subDuration);
-          const timeUntilEarlyOpen = Math.max(0, (earlyOpenTime - audioEngine.getCurrentTime()) * 1000);
-          setTimeout(() => {
-            if (!this.isRunning || this.mode !== 'continuous') return;
-            if (nextCycleSigns) {
-              this.prepareExpectedTargets(nextCycleSigns, cycleIdx + 1);
-            }
-          }, timeUntilEarlyOpen);
+                if (!this.forceReshuffle && this.repeatOnError && !evalResult.success && prevSigns) {
+                  // FAILED: Do NOT move to next set of hands! Repeat cycleIdx!
+                  targetSigns = {
+                    sign1: prevSigns.sign1,
+                    sign2: prevSigns.sign2,
+                    patternId: prevSigns.patternId
+                  };
+                } else {
+                  // PLAYED PROPERLY: Move to next set of hands!
+                  this.forceReshuffle = false;
+                  const next = this.getNextSigns();
+                  targetSigns = {
+                    sign1: next.sign1,
+                    sign2: next.sign2,
+                    patternId: next.id
+                  };
+                }
+
+                this.cycles.set(cycleIdx + 1, targetSigns);
+                this.handRenderer.applySigns(targetSigns.sign1, targetSigns.sign2);
+                this.prepareExpectedTargets(targetSigns, cycleIdx + 1);
+              } else {
+                if (nextCycleSigns) {
+                  this.prepareExpectedTargets(nextCycleSigns, cycleIdx + 1);
+                }
+              }
+            }, timeUntilEarlyOpen);
+          }
         } else {
           // Regular beat in continuous mode: pulse gesture if enabled
           if (this.conductorPulseAuto) {
@@ -1596,16 +1866,46 @@
             }, timeUntilGesture);
           }
         } else {
-          // Regular beat in imitate mode (all beats except Demo Beat 2): small pulse gesture
-          if (this.conductorPulseAuto) {
-            const beatDurationMs = this.secondsPerBeat * 1000;
-            const timeUntilGesture = Math.max(0, (beatTime - audioEngine.getCurrentTime()) * 1000);
+          // Regular beat in imitate mode:
+          // In Pass 2 on the final beat of Measure 10 (eg the last set of hands in normal mode),
+          // both hands always curl all fingers and do not activate.
+          const isFinalImitateBeat = (passType === 2 && beatIndex === this.beatsPerPass - 1);
+          const isLastMeasureOfNormalExercise = !this.isPracticeMode && (cycleIdx === this.handCountGoal - 1);
+
+          if (isFinalImitateBeat && isLastMeasureOfNormalExercise) {
+            const cutoff = this.conductorBpmCutoff || 100;
+            const isSlow = this.bpm < cutoff;
+            const chosenSub = isSlow 
+              ? (this.fingerTransitionSubSlow !== undefined ? this.fingerTransitionSubSlow : 0.25)
+              : (this.fingerTransitionSubFast !== undefined ? this.fingerTransitionSubFast : 0.25);
+            
+            let transitionOffsetSec = 0;
+            if (this.isTwoHands) {
+              transitionOffsetSec = Math.max(0, Math.min(subsPerBeat - 0.1, chosenSub)) * subDuration;
+            } else {
+              const maxSub = subsPerBeat - 0.1;
+              transitionOffsetSec = Math.max(0, Math.min(maxSub, chosenSub)) * subDuration;
+            }
+            const fingerChangeTime = beatTime + transitionOffsetSec;
+            const timeUntilFingerChange = Math.max(0, (fingerChangeTime - audioEngine.getCurrentTime()) * 1000);
+
             setTimeout(() => {
               if (!this.isRunning || this.mode !== 'imitate') return;
-              if (this.onConductorGesture) {
-                this.onConductorGesture(beatDurationMs, 'pulse', this.conductorPulseLiftHeight);
-              }
-            }, timeUntilGesture);
+              const allCurled = this.divisionMode === 'ternary' ? '000' : '0000';
+              this.handRenderer.applySigns(allCurled, allCurled);
+            }, timeUntilFingerChange);
+          } else {
+            // small pulse gesture
+            if (this.conductorPulseAuto) {
+              const beatDurationMs = this.secondsPerBeat * 1000;
+              const timeUntilGesture = Math.max(0, (beatTime - audioEngine.getCurrentTime()) * 1000);
+              setTimeout(() => {
+                if (!this.isRunning || this.mode !== 'imitate') return;
+                if (this.onConductorGesture) {
+                  this.onConductorGesture(beatDurationMs, 'pulse', this.conductorPulseLiftHeight);
+                }
+              }, timeUntilGesture);
+            }
           }
         }
       }
@@ -1622,9 +1922,19 @@
           this.activeCycleIndex = cycleIdx;
 
           if (this.mode === 'continuous') {
+            const currentSigns = this.cycles.get(cycleIdx) || cycleSigns;
+            // Evaluate previous measure at the exact downbeat of the next measure:
+            if (cycleIdx > 0 && !this.isPracticeMode) {
+              const prevMeasure = cycleIdx - 1;
+              if (!this.exerciseResults.some(r => r.handIndex === prevMeasure + 1)) {
+                this.exerciseResults.push(this.evaluateContinuousMeasure(prevMeasure));
+              }
+            }
             // Re-apply to ensure exact downbeat visual sync
-            this.handRenderer.applySigns(cycleSigns.sign1, cycleSigns.sign2);
-            this.prepareExpectedTargets(cycleSigns, cycleIdx);
+            if (currentSigns) {
+              this.handRenderer.applySigns(currentSigns.sign1, currentSigns.sign2);
+              this.prepareExpectedTargets(currentSigns, cycleIdx);
+            }
           } else {
             // Visually display the EXACT signs for this cycle!
             this.handRenderer.applySigns(cycleSigns.sign1, cycleSigns.sign2);
@@ -1638,6 +1948,8 @@
           }
         }
 
+        const effectiveSigns = (this.mode === 'continuous') ? (this.cycles.get(cycleIdx) || cycleSigns) : cycleSigns;
+
         if (this.onStateChange) {
           this.onStateChange({
             mode: this.mode,
@@ -1646,9 +1958,9 @@
             isReady: false,
             beat: beatIndex + 1,
             totalBeats: this.beatsPerPass,
-            sign1: cycleSigns.sign1,
-            sign2: cycleSigns.sign2,
-            patternId: cycleSigns.patternId || null,
+            sign1: effectiveSigns.sign1,
+            sign2: effectiveSigns.sign2,
+            patternId: effectiveSigns.patternId || null,
             bpm: this.bpm,
             isPracticeMode: this.isPracticeMode,
             currentHand: cycleIdx + 1,
@@ -1689,6 +2001,13 @@
         this.expectedTargetSlots.clear();
         this.perfectTargetSlots.clear();
         this.hasError = false;
+      } else {
+        // Clear any slots previously registered for this exact cycleIdx to prevent duplicates on repeat/rearm
+        for (const k of this.expectedTargetSlots) {
+          if (k.startsWith(`${cycleIdx}_`)) {
+            this.expectedTargetSlots.delete(k);
+          }
+        }
       }
 
       const subs = this.subdivisionsPerBeat;
@@ -1722,6 +2041,22 @@
       }
     }
 
+    evaluateContinuousMeasure(c) {
+      const hadError = this.measureErrors.has(c);
+      let allPerfect = true;
+      let expectedCount = 0;
+      for (const slot of this.expectedTargetSlots) {
+        if (slot.startsWith(`${c}_`)) {
+          expectedCount++;
+          if (!this.perfectTargetSlots.has(slot)) {
+            allPerfect = false;
+          }
+        }
+      }
+      const success = !hadError && (expectedCount > 0 ? allPerfect : true);
+      return { handIndex: c + 1, success };
+    }
+
     handleUserTap(eventTimeStamp) {
       // 1. Immediate tactile sound (sub-millisecond Web Audio)
       audioEngine.playUserTap();
@@ -1749,6 +2084,11 @@
             isTest: true
           });
         }
+        return;
+      }
+
+      // Ignore taps during countdown
+      if (this.isCountingDown) {
         return;
       }
 
@@ -1896,11 +2236,11 @@
           this.hasError = true;
           this.measureErrors.add(matchedCycle);
         } else if (Math.abs(subDeltaMs) <= this.thresholdPerfectMs) {
-          // Tier 1: Perfect (Green) - within ±35ms!
+          // Tier 1: Perfect (Green) - within ±45ms!
           rating = 'perfect';
           this.perfectTargetSlots.add(slotKey);
         } else if (Math.abs(subDeltaMs) <= this.thresholdMaxMs) {
-          // Tier 2: Near-miss (Orange) - between ±35ms and ±85ms (early < or late >)
+          // Tier 2: Near-miss (Orange) - between ±45ms and ±85ms (early < or late >)
           rating = (subDeltaMs < 0) ? 'early' : 'late';
           this.hasError = true;
           this.measureErrors.add(matchedCycle);
@@ -1942,6 +2282,12 @@
       this.showKnuckleLine = false;
       this.showSubdivisionGuides = false;
 
+      // Statistics tracking state for Section 4
+      this.recentTaps = []; // Circular/sliding buffer of last 10 tap deltas (ms)
+      this.exerciseTaps = []; // All tap deltas (ms) in current 10-hand exercise set
+      this.exerciseRatings = { perfect: 0, early: 0, late: 0, miss: 0 };
+      this.exerciseHandsCompleted = 0;
+
       this.initDom();
       this.bindEvents();
     }
@@ -1955,6 +2301,7 @@
         else if (v === 1) name = 'Sub 2 (Ka)';
         else if (v === 2) name = 'Sub 3 (Di)';
         else if (v === 3) name = 'Sub 4 (Mi)';
+        else if (v === 0.25) name = 'Ta + 0.25';
         else if (v === 0.5) name = 'Ta + 0.5';
         else if (v === 1.5) name = 'Ka + 0.5';
         else if (v === 2.5) name = 'Di + 0.5';
@@ -1963,6 +2310,7 @@
         if (v === 0) name = 'Beat Start (Ta)';
         else if (v === 1) name = 'Sub 2 (Ki)';
         else if (v === 2) name = 'Sub 3 (Da)';
+        else if (v === 0.25) name = 'Ta + 0.25';
         else if (v === 0.5) name = 'Ta + 0.5';
         else if (v === 1.5) name = 'Ki + 0.5';
         else name = `Sub ${v.toFixed(2)}`;
@@ -2018,10 +2366,24 @@
               <div class="debug-select-row">
                 <label>Subdivision Sound:</label>
                 <select id="dbg-select-sub" class="dbg-select">
-                  <option value="wood-tap" selected>Wood Tap</option>
+                  <option value="shaker" selected>Percussion Shaker</option>
+                  <option value="wood-tap">Wood Tap</option>
                   <option value="soft-tick">Soft Ambient Tick</option>
-                  <option value="shaker">Percussion Shaker</option>
                   <option value="high-blip">High Digital Blip</option>
+                </select>
+              </div>
+
+              <div class="debug-select-row">
+                <label>Imitate Sound:</label>
+                <select id="dbg-select-imitate" class="dbg-select">
+                  <option value="handclap" selected>Hand Clap</option>
+                  <option value="synth-blip">Synth Blip</option>
+                  <option value="woodblock">Woodblock</option>
+                  <option value="marimba">Marimba</option>
+                  <option value="bongo">Bongo</option>
+                  <option value="clave">Clave</option>
+                  <option value="cowbell">Cowbell</option>
+                  <option value="rimshot">Rimshot</option>
                 </select>
               </div>
 
@@ -2052,8 +2414,8 @@
                 <input type="range" id="dbg-slider-latency" min="0" max="120" value="${this.engine.latencyOffsetMs}" step="1">
               </div>
               <div class="debug-slider-row">
-                <label>Perfect Window: <span id="dbg-val-perfect">±35ms</span></label>
-                <input type="range" id="dbg-slider-perfect" min="15" max="65" value="35" step="1">
+                <label>Perfect Window: <span id="dbg-val-perfect">±45ms</span></label>
+                <input type="range" id="dbg-slider-perfect" min="15" max="65" value="45" step="1">
               </div>
               <div class="debug-slider-row">
                 <label>Max Window (Early/Late): <span id="dbg-val-max">±85ms</span></label>
@@ -2064,15 +2426,71 @@
 
           <div class="debug-section">
             <div class="debug-section-header" data-target="debug-sec-state">
-              <span class="chevron">▶</span> 4. Real-Time Engine State
+              <span class="chevron">▶</span> 4. Real-Time Engine State & Statistics
             </div>
             <div id="debug-sec-state" class="debug-section-body collapsed">
+              <!-- Engine General Status -->
               <div class="debug-data-grid">
                 <div class="data-item"><span class="lbl">BPM:</span> <span id="dbg-rt-bpm" class="val">--</span></div>
                 <div class="data-item"><span class="lbl">Pass:</span> <span id="dbg-rt-pass" class="val">--</span></div>
                 <div class="data-item"><span class="lbl">Signs:</span> <span id="dbg-rt-sign" class="val highlight">--</span></div>
                 <div class="data-item"><span class="lbl">Last Offset:</span> <span id="dbg-rt-delta" class="val">--</span></div>
-                <div class="data-item"><span class="lbl">Rating:</span> <span id="dbg-rt-rating" class="val">--</span></div>
+                <div class="data-item"><span class="lbl">Last Rating:</span> <span id="dbg-rt-rating" class="val">--</span></div>
+                <div class="data-item"><span class="lbl">Exercise Progress:</span> <span id="dbg-stat-hands-count" class="val">0 / 10</span></div>
+              </div>
+
+              <!-- Offset Analytics Sub-Card -->
+              <div class="debug-stats-card">
+                <div class="debug-stats-card-title">OFFSET & PRECISION ANALYTICS</div>
+                <div class="debug-data-grid debug-grid-3col">
+                  <div class="data-item" title="Running average of last 10 player taps">
+                    <span class="lbl">Sliding Avg (10)</span>
+                    <span id="dbg-stat-sliding-avg" class="val highlight">--</span>
+                  </div>
+                  <div class="data-item" title="Arithmetic mean across all exercise taps">
+                    <span class="lbl">Exercise Mean</span>
+                    <span id="dbg-stat-mean" class="val">--</span>
+                  </div>
+                  <div class="data-item" title="Median offset across all exercise taps (outlier-proof)">
+                    <span class="lbl">Exercise Median</span>
+                    <span id="dbg-stat-median" class="val">--</span>
+                  </div>
+                </div>
+
+                <div class="debug-data-grid debug-grid-3col" style="margin-top: 4px;">
+                  <div class="data-item" title="Timing consistency (standard deviation)">
+                    <span class="lbl">Jitter (StdDev)</span>
+                    <span id="dbg-stat-stddev" class="val">--</span>
+                  </div>
+                  <div class="data-item" title="Tendency: Rushing vs Dragging">
+                    <span class="lbl">Timing Bias</span>
+                    <span id="dbg-stat-bias" class="val">--</span>
+                  </div>
+                  <div class="data-item" title="Min and Max offset recorded in exercise">
+                    <span class="lbl">Min / Max Range</span>
+                    <span id="dbg-stat-range" class="val">--</span>
+                  </div>
+                </div>
+
+                <!-- Last 10 Taps Visual Trend Strip -->
+                <div class="debug-sparkline-row">
+                  <span class="lbl">Last 10 Taps Trend (Center = Exact Beat):</span>
+                  <div id="dbg-sparkline" class="debug-sparkline"></div>
+                </div>
+              </div>
+
+              <!-- Exercise Hit Evaluation Counts Sub-Card -->
+              <div class="debug-stats-card">
+                <div class="debug-stats-card-title" style="display:flex; justify-content:space-between; align-items:center;">
+                  <span>EXERCISE HITS BREAKDOWN</span>
+                  <button id="btn-dbg-reset-stats" class="btn-dbg-mini" type="button" title="Réinitialiser les statistiques">Reset Stats</button>
+                </div>
+                <div class="debug-data-grid debug-grid-4col">
+                  <div class="data-item"><span class="lbl">Total Taps</span> <span id="dbg-stat-taps-total" class="val">0</span></div>
+                  <div class="data-item"><span class="lbl">Perfect</span> <span id="dbg-stat-perfect" class="val perfect">0</span></div>
+                  <div class="data-item"><span class="lbl">Early</span> <span id="dbg-stat-early" class="val early">0</span></div>
+                  <div class="data-item"><span class="lbl">Late</span> <span id="dbg-stat-late" class="val late">0</span></div>
+                </div>
               </div>
             </div>
           </div>
@@ -2104,12 +2522,12 @@
                     Finger Transition Timing (Continuous Mode)
                   </div>
                   <div class="debug-slider-row" style="margin-bottom: 8px;">
-                    <label>Under Cutoff (&lt;${this.engine.conductorBpmCutoff || 100} BPM): <span id="dbg-val-finger-trans-slow">${this.formatSubdivisionLabel(this.engine.fingerTransitionSubSlow !== undefined ? this.engine.fingerTransitionSubSlow : 2.0)}</span></label>
-                    <input type="range" id="dbg-slider-finger-trans-slow" min="0" max="3" value="${this.engine.fingerTransitionSubSlow !== undefined ? this.engine.fingerTransitionSubSlow : 2.0}" step="0.25">
+                    <label>Under Cutoff (&lt;${this.engine.conductorBpmCutoff || 100} BPM): <span id="dbg-val-finger-trans-slow">${this.formatSubdivisionLabel(this.engine.fingerTransitionSubSlow !== undefined ? this.engine.fingerTransitionSubSlow : 0.25)}</span></label>
+                    <input type="range" id="dbg-slider-finger-trans-slow" min="0" max="3" value="${this.engine.fingerTransitionSubSlow !== undefined ? this.engine.fingerTransitionSubSlow : 0.25}" step="0.25">
                   </div>
                   <div class="debug-slider-row">
-                    <label>Over Cutoff (&ge;${this.engine.conductorBpmCutoff || 100} BPM): <span id="dbg-val-finger-trans-fast">${this.formatSubdivisionLabel(this.engine.fingerTransitionSubFast !== undefined ? this.engine.fingerTransitionSubFast : 0.0)}</span></label>
-                    <input type="range" id="dbg-slider-finger-trans-fast" min="0" max="3" value="${this.engine.fingerTransitionSubFast !== undefined ? this.engine.fingerTransitionSubFast : 0.0}" step="0.25">
+                    <label>Over Cutoff (&ge;${this.engine.conductorBpmCutoff || 100} BPM): <span id="dbg-val-finger-trans-fast">${this.formatSubdivisionLabel(this.engine.fingerTransitionSubFast !== undefined ? this.engine.fingerTransitionSubFast : 0.25)}</span></label>
+                    <input type="range" id="dbg-slider-finger-trans-fast" min="0" max="3" value="${this.engine.fingerTransitionSubFast !== undefined ? this.engine.fingerTransitionSubFast : 0.25}" step="0.25">
                   </div>
                 </div>
                 <div class="debug-slider-row">
@@ -2228,6 +2646,9 @@
       });
       document.getElementById('dbg-select-sub').addEventListener('change', (e) => {
         audioEngine.subdivisionSound = e.target.value;
+      });
+      document.getElementById('dbg-select-imitate').addEventListener('change', (e) => {
+        audioEngine.imitateSound = e.target.value;
       });
       document.getElementById('dbg-select-tap').addEventListener('change', (e) => {
         audioEngine.tapSound = e.target.value;
@@ -2408,6 +2829,12 @@
         e.preventDefault();
         triggerScoreTest();
       });
+
+      // Reset statistics button in Section 4
+      const btnResetStats = document.getElementById('btn-dbg-reset-stats');
+      btnResetStats?.addEventListener('click', () => {
+        this.resetStats();
+      });
     }
 
     notifyVisualToggles() {
@@ -2451,6 +2878,179 @@
       });
     }
 
+    resetStats() {
+      this.recentTaps = [];
+      this.exerciseTaps = [];
+      this.exerciseRatings = { perfect: 0, early: 0, late: 0, miss: 0 };
+      this.renderStatsView();
+    }
+
+    recordTapEvaluation(evalData) {
+      if (evalData.isTest || evalData.isDemoTap) return;
+
+      const delta = evalData.deltaMs;
+      if (typeof delta === 'number' && !isNaN(delta) && Math.abs(delta) < 600) {
+        // 1. Sliding window (last 10 taps)
+        this.recentTaps.push(delta);
+        if (this.recentTaps.length > 10) {
+          this.recentTaps.shift();
+        }
+
+        // 2. Exercise cumulative taps
+        this.exerciseTaps.push(delta);
+
+        // 3. Ratings tally
+        const r = evalData.rating || 'miss';
+        if (this.exerciseRatings[r] !== undefined) {
+          this.exerciseRatings[r]++;
+        } else {
+          this.exerciseRatings[r] = 1;
+        }
+
+        this.renderStatsView();
+      }
+    }
+
+    renderStatsView() {
+      // 1. Sliding Average of last 10 taps
+      const elSliding = document.getElementById('dbg-stat-sliding-avg');
+      if (elSliding) {
+        if (this.recentTaps.length > 0) {
+          const sum = this.recentTaps.reduce((acc, v) => acc + v, 0);
+          const avg = sum / this.recentTaps.length;
+          const sign = avg > 0 ? `+${avg.toFixed(1)}` : avg.toFixed(1);
+          elSliding.textContent = `${sign}ms (${this.recentTaps.length}/10)`;
+        } else {
+          elSliding.textContent = '--';
+        }
+      }
+
+      // 2. Exercise Mean
+      const elMean = document.getElementById('dbg-stat-mean');
+      if (elMean) {
+        if (this.exerciseTaps.length > 0) {
+          const sum = this.exerciseTaps.reduce((acc, v) => acc + v, 0);
+          const mean = sum / this.exerciseTaps.length;
+          const sign = mean > 0 ? `+${mean.toFixed(1)}` : mean.toFixed(1);
+          elMean.textContent = `${sign}ms`;
+        } else {
+          elMean.textContent = '--';
+        }
+      }
+
+      // 3. Exercise Median
+      const elMedian = document.getElementById('dbg-stat-median');
+      if (elMedian) {
+        if (this.exerciseTaps.length > 0) {
+          const sorted = [...this.exerciseTaps].sort((a, b) => a - b);
+          const mid = Math.floor(sorted.length / 2);
+          const median = (sorted.length % 2 !== 0) ? sorted[mid] : ((sorted[mid - 1] + sorted[mid]) / 2);
+          const sign = median > 0 ? `+${median.toFixed(1)}` : median.toFixed(1);
+          elMedian.textContent = `${sign}ms`;
+        } else {
+          elMedian.textContent = '--';
+        }
+      }
+
+      // 4. Jitter / Standard Deviation
+      const elStdDev = document.getElementById('dbg-stat-stddev');
+      if (elStdDev) {
+        if (this.exerciseTaps.length > 1) {
+          const mean = this.exerciseTaps.reduce((acc, v) => acc + v, 0) / this.exerciseTaps.length;
+          const variance = this.exerciseTaps.reduce((acc, v) => acc + Math.pow(v - mean, 2), 0) / this.exerciseTaps.length;
+          const stdDev = Math.sqrt(variance);
+          elStdDev.textContent = `±${stdDev.toFixed(1)}ms`;
+        } else {
+          elStdDev.textContent = '--';
+        }
+      }
+
+      // 5. Timing Bias (Rushing vs Dragging)
+      const elBias = document.getElementById('dbg-stat-bias');
+      if (elBias) {
+        if (this.exerciseTaps.length >= 3) {
+          const mean = this.exerciseTaps.reduce((acc, v) => acc + v, 0) / this.exerciseTaps.length;
+          if (mean < -12) {
+            elBias.textContent = `Ahead (${mean.toFixed(0)}ms)`;
+            elBias.style.color = '#38bdf8'; // Blueish
+          } else if (mean > 12) {
+            elBias.textContent = `Behind (+${mean.toFixed(0)}ms)`;
+            elBias.style.color = '#f97316'; // Orange
+          } else {
+            elBias.textContent = `Locked In (±${Math.abs(mean).toFixed(0)}ms)`;
+            elBias.style.color = '#22c55e'; // Green
+          }
+        } else {
+          elBias.textContent = '--';
+          elBias.style.color = '';
+        }
+      }
+
+      // 6. Min / Max Offset Range
+      const elRange = document.getElementById('dbg-stat-range');
+      if (elRange) {
+        if (this.exerciseTaps.length > 0) {
+          let min = Infinity;
+          let max = -Infinity;
+          for (const v of this.exerciseTaps) {
+            if (v < min) min = v;
+            if (v > max) max = v;
+          }
+          const minStr = min > 0 ? `+${min.toFixed(0)}` : min.toFixed(0);
+          const maxStr = max > 0 ? `+${max.toFixed(0)}` : max.toFixed(0);
+          elRange.textContent = `[${minStr} .. ${maxStr}]`;
+        } else {
+          elRange.textContent = '--';
+        }
+      }
+
+      // 7. Sparkline / History Strip (last 10 taps)
+      const sparkEl = document.getElementById('dbg-sparkline');
+      if (sparkEl) {
+        sparkEl.innerHTML = '';
+        for (let i = 0; i < 10; i++) {
+          const slot = document.createElement('div');
+          slot.className = 'spark-bar-slot';
+          
+          const line = document.createElement('div');
+          line.className = 'spark-zero-line';
+          slot.appendChild(line);
+
+          if (i < this.recentTaps.length) {
+            const delta = this.recentTaps[i];
+            const dot = document.createElement('div');
+            // Clamp offset for visual plotting (-50ms to +50ms -> 10% to 90% top)
+            const clamped = Math.max(-60, Math.min(60, delta));
+            // delta < 0 is early (above zero line), delta > 0 is late (below zero line)
+            const topPct = 50 + (clamped / 60) * 40;
+            dot.style.top = `${topPct}%`;
+
+            let rating = 'perfect';
+            if (Math.abs(delta) > (this.engine ? this.engine.thresholdPerfectMs : 45)) {
+              rating = delta < 0 ? 'early' : 'late';
+            }
+            dot.className = `spark-dot ${rating}`;
+            dot.title = `Tap ${i + 1}: ${delta > 0 ? '+' : ''}${delta.toFixed(1)}ms`;
+            slot.appendChild(dot);
+          }
+          sparkEl.appendChild(slot);
+        }
+      }
+
+      // 8. Exercise Accuracy Breakdown
+      const elTotal = document.getElementById('dbg-stat-taps-total');
+      if (elTotal) elTotal.textContent = `${this.exerciseTaps.length}`;
+
+      const elPerf = document.getElementById('dbg-stat-perfect');
+      if (elPerf) elPerf.textContent = `${this.exerciseRatings.perfect || 0}`;
+
+      const elEarly = document.getElementById('dbg-stat-early');
+      if (elEarly) elEarly.textContent = `${this.exerciseRatings.early || 0}`;
+
+      const elLate = document.getElementById('dbg-stat-late');
+      if (elLate) elLate.textContent = `${this.exerciseRatings.late || 0}`;
+    }
+
     updateStateView(data) {
       if (!this.isOpen) return;
       if (data.bpm !== undefined) {
@@ -2489,6 +3089,252 @@
           ratingEl.className = `val ${data.rating}`;
         }
       }
+      if (data.completedHands !== undefined) {
+        const handsEl = document.getElementById('dbg-stat-hands-count');
+        if (handsEl) {
+          handsEl.textContent = `${data.completedHands} / 10`;
+        }
+      }
+    }
+  }
+
+/* ==========================================================================
+     5.5. LATENCY CALIBRATION CONTROLLER
+     ========================================================================== */
+  class LatencyCalibrator {
+    constructor(app) {
+      this.app = app;
+      this.isOpen = false;
+      this.tapCount = 8; // remaining count starting at 8
+      this.tapsHistory = []; // array of offsets in ms
+      this.timerId = null;
+      this.nextBeatTime = 0;
+      this.firstBeatTime = 0;
+      this.isFirstBeatScheduled = false;
+
+      // DOM elements
+      this.backdrop = document.getElementById('latency-modal-backdrop');
+      this.modal = document.getElementById('latency-modal');
+      this.instructionText = document.getElementById('latency-instruction-text');
+      this.tapBtn = document.getElementById('btn-latency-tap');
+      this.restartBtn = document.getElementById('btn-latency-restart');
+      this.confirmBtn = document.getElementById('btn-latency-confirm');
+      this.resultCard = document.getElementById('latency-result-card');
+      this.resultVal = document.getElementById('latency-result-val');
+      this.beatDot = document.getElementById('latency-beat-dot');
+      this.closeBtn = document.getElementById('btn-close-latency');
+
+      this.initEvents();
+    }
+
+    initEvents() {
+      if (this.tapBtn) {
+        this.tapBtn.addEventListener('pointerdown', (e) => {
+          e.preventDefault();
+          this.handleTap(e.timeStamp);
+        });
+      }
+
+      if (this.restartBtn) {
+        this.restartBtn.addEventListener('click', () => {
+          this.resetCalibration();
+        });
+      }
+
+      if (this.confirmBtn) {
+        this.confirmBtn.addEventListener('click', () => {
+          this.saveAndApply();
+        });
+      }
+
+      if (this.closeBtn) {
+        this.closeBtn.addEventListener('click', () => {
+          this.close();
+        });
+      }
+
+      if (this.backdrop) {
+        this.backdrop.addEventListener('click', () => {
+          this.close();
+        });
+      }
+    }
+
+    open() {
+      if (this.isOpen) return;
+      this.isOpen = true;
+
+      // Ensure audio context is running
+      audioEngine.ensureRunning();
+
+      this.resetCalibration();
+
+      if (this.backdrop) this.backdrop.classList.remove('hidden');
+      if (this.modal) this.modal.classList.remove('hidden');
+
+      // Close drawer if open to avoid visual overlap
+      if (this.app) {
+        this.app.closeDrawer();
+      }
+
+      // Start 60 BPM metronome immediately
+      this.startMetronome();
+    }
+
+    close() {
+      if (!this.isOpen) return;
+      this.isOpen = false;
+      this.stopMetronome();
+
+      if (this.backdrop) this.backdrop.classList.add('hidden');
+      if (this.modal) this.modal.classList.add('hidden');
+    }
+
+    resetCalibration() {
+      this.tapCount = 8;
+      this.tapsHistory = [];
+      if (this.resultCard) this.resultCard.classList.remove('visible');
+      if (this.confirmBtn) this.confirmBtn.classList.remove('visible');
+      this.updateInstructionText();
+    }
+
+    startMetronome() {
+      this.stopMetronome();
+      this.isFirstBeatScheduled = false;
+      // Start slightly in future
+      this.nextBeatTime = audioEngine.getCurrentTime() + 0.08;
+      this.firstBeatTime = this.nextBeatTime;
+      this.isFirstBeatScheduled = true;
+      this.scheduleLoop();
+    }
+
+    stopMetronome() {
+      if (this.timerId) {
+        clearTimeout(this.timerId);
+        this.timerId = null;
+      }
+    }
+
+    scheduleLoop() {
+      if (!this.isOpen) return;
+
+      const currentTime = audioEngine.getCurrentTime();
+      // Lookahead window of 120ms
+      while (this.nextBeatTime < currentTime + 0.12) {
+        const beatT = this.nextBeatTime;
+        // High click at 60 BPM
+        audioEngine.playMetronomeClick(beatT, true);
+
+        // Flash visual beat dot exactly at beat time
+        const delayMs = Math.max(0, (beatT - currentTime) * 1000);
+        setTimeout(() => {
+          if (!this.isOpen || !this.beatDot) return;
+          this.beatDot.classList.add('flash');
+          setTimeout(() => {
+            if (this.beatDot) this.beatDot.classList.remove('flash');
+          }, 110);
+        }, delayMs);
+
+        // Advance 1.0s (60 BPM = 1 beat/sec)
+        this.nextBeatTime += 1.0;
+      }
+
+      this.timerId = setTimeout(() => this.scheduleLoop(), 25);
+    }
+
+    handleTap(eventTimeStamp) {
+      if (!this.isOpen) return;
+
+      // Precise tap time calculation with event arrival delay subtraction
+      let eventAgeSec = 0;
+      if (eventTimeStamp && typeof performance !== 'undefined' && performance.now) {
+        eventAgeSec = Math.max(0, (performance.now() - eventTimeStamp) / 1000);
+      }
+      const rawTapTime = audioEngine.getCurrentTime() - eventAgeSec;
+
+      // Find closest beat:
+      // Since tempo is 60 BPM (interval = 1.0s), beats are at: firstBeatTime + k * 1.0
+      // distance from nearest beat:
+      const beatInterval = 1.0;
+      const beatOffset = rawTapTime - this.firstBeatTime;
+      const nearestBeatIndex = Math.round(beatOffset / beatInterval);
+      const nearestBeatTime = this.firstBeatTime + (nearestBeatIndex * beatInterval);
+
+      // Delta: tap relative to nearest beat
+      const diffSec = rawTapTime - nearestBeatTime;
+      // Clamped to [-0.5s, +0.5s] as per requirements
+      const clampedDiffSec = Math.max(-0.5, Math.min(0.5, diffSec));
+      const offsetMs = clampedDiffSec * 1000;
+
+      // Add to sample history
+      this.tapsHistory.push(offsetMs);
+
+      // Decrement countdown
+      if (this.tapCount > 0) {
+        this.tapCount--;
+      }
+
+      // If at zero, show "Let's Go !" button without layout shift
+      if (this.tapCount === 0 && this.confirmBtn) {
+        this.confirmBtn.classList.add('visible');
+      }
+
+      // Update instructions
+      this.updateInstructionText();
+
+      // Display detected latency starting from 4th tap without layout shift
+      if (this.tapsHistory.length >= 4) {
+        const avg = this.getAverageOffset();
+        if (this.resultCard) this.resultCard.classList.add('visible');
+        if (this.resultVal) {
+          // Display formatted average
+          this.resultVal.textContent = `${Math.round(avg)} ms`;
+        }
+      }
+    }
+
+    getAverageOffset() {
+      if (!this.tapsHistory || this.tapsHistory.length === 0) return 0;
+      const sum = this.tapsHistory.reduce((acc, v) => acc + v, 0);
+      // Ensure positive hardware latency compensation offset (or 0)
+      return Math.max(0, sum / this.tapsHistory.length);
+    }
+
+    updateInstructionText() {
+      if (!this.instructionText) return;
+      if (this.tapCount === 8) {
+        this.instructionText.textContent = this.app.t('latencyInitialHelp');
+      } else if (this.tapCount > 0) {
+        this.instructionText.textContent = this.app.t('latencyRemainingHelp', this.tapCount);
+      } else {
+        this.instructionText.textContent = this.app.t('latencyFinishedHelp');
+      }
+    }
+
+    saveAndApply() {
+      const finalMs = Math.round(this.getAverageOffset());
+
+      // Save to localStorage
+      localStorage.setItem('rcs_latency_offset', finalMs);
+
+      // Apply to rhythmEngine
+      if (this.app && this.app.rhythmEngine) {
+        this.app.rhythmEngine.latencyOffsetMs = finalMs;
+      }
+
+      // Update debug slider and readout if debug panel initialized
+      const dbgSlider = document.getElementById('dbg-slider-latency');
+      const dbgVal = document.getElementById('dbg-val-latency');
+      if (dbgSlider) dbgSlider.value = finalMs;
+      if (dbgVal) dbgVal.textContent = `${finalMs}ms`;
+
+      // Update settings drawer display
+      if (this.app) {
+        this.app.updateLatencyDisplay();
+      }
+
+      // Close modal
+      this.close();
     }
   }
 
@@ -2500,6 +3346,7 @@
       this.handRenderer = null;
       this.rhythmEngine = null;
       this.debugPanel = null;
+      this.latencyCalibrator = null;
 
       this.cachedKnuckles = null;
       this.cachedTimelineLeft = 0;
@@ -2581,22 +3428,47 @@
       if (lblPracticeMode) lblPracticeMode.textContent = this.t('practiceMode');
       const lblPracticeDesc = document.getElementById('lbl-practice-desc');
       if (lblPracticeDesc) lblPracticeDesc.textContent = this.t('practiceDesc');
+      const practiceRow = document.getElementById('row-toggle-practice');
+      if (practiceRow) {
+        practiceRow.title = this.t('tooltipPracticeToggle');
+        practiceRow.setAttribute('data-tooltip', this.t('tooltipPracticeToggle'));
+      }
 
       const lblMode = document.getElementById('lbl-mode');
       if (lblMode) lblMode.textContent = this.t('mode');
       const btnModeImitate = document.getElementById('btn-mode-imitate');
-      if (btnModeImitate) btnModeImitate.textContent = this.t('modeImitate');
+      if (btnModeImitate) {
+        btnModeImitate.textContent = this.t('modeImitate');
+        btnModeImitate.title = this.t('tooltipModeImitate');
+        btnModeImitate.setAttribute('data-tooltip', this.t('tooltipModeImitate'));
+      }
       const btnModeContinuous = document.getElementById('btn-mode-continuous');
-      if (btnModeContinuous) btnModeContinuous.textContent = this.t('modeContinuous');
+      if (btnModeContinuous) {
+        btnModeContinuous.textContent = this.t('modeContinuous');
+        btnModeContinuous.title = this.t('tooltipModeContinuous');
+        btnModeContinuous.setAttribute('data-tooltip', this.t('tooltipModeContinuous'));
+      }
 
       const lblView = document.getElementById('lbl-view');
       if (lblView) lblView.textContent = this.t('view');
       const btnViewLeft = document.getElementById('btn-view-left');
-      if (btnViewLeft) btnViewLeft.textContent = this.t('viewLeft');
+      if (btnViewLeft) {
+        btnViewLeft.textContent = this.t('viewLeft');
+        btnViewLeft.title = this.t('tooltipViewLeft');
+        btnViewLeft.setAttribute('data-tooltip', this.t('tooltipViewLeft'));
+      }
       const btnViewRight = document.getElementById('btn-view-right');
-      if (btnViewRight) btnViewRight.textContent = this.t('viewRight');
+      if (btnViewRight) {
+        btnViewRight.textContent = this.t('viewRight');
+        btnViewRight.title = this.t('tooltipViewRight');
+        btnViewRight.setAttribute('data-tooltip', this.t('tooltipViewRight'));
+      }
       const btnViewTwo = document.getElementById('btn-view-two');
-      if (btnViewTwo) btnViewTwo.textContent = this.t('viewTwo');
+      if (btnViewTwo) {
+        btnViewTwo.textContent = this.t('viewTwo');
+        btnViewTwo.title = this.t('tooltipViewTwo');
+        btnViewTwo.setAttribute('data-tooltip', this.t('tooltipViewTwo'));
+      }
 
       const lblSubdivision = document.getElementById('lbl-subdivision');
       if (lblSubdivision) lblSubdivision.textContent = this.t('subdivision');
@@ -2639,11 +3511,23 @@
       const lblFingerLabels = document.getElementById('lbl-finger-labels');
       if (lblFingerLabels) lblFingerLabels.textContent = this.t('fingerLabels');
       const btnLabelSolfege = document.getElementById('btn-label-solfege');
-      if (btnLabelSolfege) btnLabelSolfege.textContent = this.t('labelSolfege');
+      if (btnLabelSolfege) {
+        btnLabelSolfege.textContent = this.t('labelSolfege');
+        btnLabelSolfege.title = this.t('tooltipLabelSolfege');
+        btnLabelSolfege.setAttribute('data-tooltip', this.t('tooltipLabelSolfege'));
+      }
       const btnLabelNumbers = document.getElementById('btn-label-numbers');
-      if (btnLabelNumbers) btnLabelNumbers.textContent = this.t('labelNumbers');
+      if (btnLabelNumbers) {
+        btnLabelNumbers.textContent = this.t('labelNumbers');
+        btnLabelNumbers.title = this.t('tooltipLabelNumbers');
+        btnLabelNumbers.setAttribute('data-tooltip', this.t('tooltipLabelNumbers'));
+      }
       const btnLabelErased = document.getElementById('btn-label-erased');
-      if (btnLabelErased) btnLabelErased.textContent = this.t('labelHidden');
+      if (btnLabelErased) {
+        btnLabelErased.textContent = this.t('labelHidden');
+        btnLabelErased.title = this.t('tooltipLabelHidden');
+        btnLabelErased.setAttribute('data-tooltip', this.t('tooltipLabelHidden'));
+      }
 
       // 4. Main Stage Controls & Tooltips
       const btnAddMainText = document.getElementById('btn-add-main-text');
@@ -2671,7 +3555,25 @@
         }
       }
 
-      // 5. Modals (if currently open)
+      // 5. Latency settings & test elements
+      const lblLatencyTest = document.getElementById('lbl-latency-test');
+      if (lblLatencyTest) lblLatencyTest.textContent = this.t('latencySettingBtn');
+      this.updateLatencyDisplay();
+
+      const latencyModalTitle = document.getElementById('latency-modal-title');
+      if (latencyModalTitle) latencyModalTitle.textContent = this.t('latencyModalTitle');
+      const btnLatencyRestart = document.getElementById('btn-latency-restart');
+      if (btnLatencyRestart) btnLatencyRestart.textContent = this.t('latencyBtnRestart');
+      const btnLatencyConfirm = document.getElementById('btn-latency-confirm');
+      if (btnLatencyConfirm) btnLatencyConfirm.textContent = this.t('latencyBtnLetsGo');
+      const latencyResultLabel = document.getElementById('latency-result-label');
+      if (latencyResultLabel) latencyResultLabel.textContent = this.t('latencyDetectedLabel');
+
+      if (this.latencyCalibrator && this.latencyCalibrator.isOpen) {
+        this.latencyCalibrator.updateInstructionText();
+      }
+
+      // 6. Modals (if currently open)
       const helpModal = document.getElementById('help-modal');
       if (helpModal && !helpModal.classList.contains('hidden')) {
         this.renderHelpContent();
@@ -2688,6 +3590,20 @@
         if (this._lastScoreResults) {
           this.updateScoreMessage(this._lastScoreResults);
         }
+      }
+    }
+
+    updateLatencyDisplay() {
+      const displayEl = document.getElementById('latency-current-display');
+      if (displayEl) {
+        const currentMs = (this.rhythmEngine && this.rhythmEngine.latencyOffsetMs !== undefined)
+          ? this.rhythmEngine.latencyOffsetMs
+          : (parseInt(localStorage.getItem('rcs_latency_offset') || '0', 10));
+        displayEl.textContent = `${this.t('latencyCurrentPrefix')}${currentMs} ms`;
+      }
+      const explainerEl = document.getElementById('latency-explainer-display');
+      if (explainerEl) {
+        explainerEl.textContent = this.t('latencyExplainer');
       }
     }
 
@@ -2747,7 +3663,7 @@
 
             <div class="help-section">
               <h3>Precisión y puntos de respuesta</h3>
-              <p>Cuando comience el ritmo, toca la barra espaciadora o el botón al pulso exacto. Bajo tus dedos, los puntos te responden al instante mediante un sistema de tolerancia de tres niveles: el <strong>verde</strong> premia una precisión quirúrgica dentro de los 35 milisegundos. El <strong>naranja</strong> avisa de un golpe cercano pero imperfecto: una flecha hacia la izquierda (<strong>&lt;</strong>) indica que tocaste antes de tiempo, mientras que hacia la derecha (<strong>&gt;</strong>) indica que tocaste tarde. El <strong>rojo</strong> señala un error claro: gran desfase de tiempo, golpe sobre un silencio o golpe duplicado.</p>
+              <p>Cuando comience el ritmo, toca la barra espaciadora o el botón al pulso exacto. Bajo tus dedos, los puntos te responden al instante mediante un sistema de tolerancia de tres niveles: el <strong>verde</strong> premia una frappe precisa. El <strong>naranja</strong> avisa de un golpe cercano pero imperfecto: una flecha hacia la izquierda (<strong>&lt;</strong>) indica que tocaste antes de tiempo, mientras que hacia la derecha (<strong>&gt;</strong>) indica que tocaste tarde. El <strong>rojo</strong> señala un error claro: gran desfase de tiempo, golpe sobre un silencio o golpe duplicado. Recuerda calibrar tu dispositivo en los ajustes para mayor precisión.</p>
             </div>
 
             <div class="help-section">
@@ -2769,7 +3685,7 @@
 
             <div class="help-section">
               <h3>Feedback & Timing Precision</h3>
-              <p>As the groove starts, hit the spacebar or tap button right in the pocket. The feedback dots tell you the truth immediately through a three-tier tolerance system: <strong>green</strong> rewards surgical precision within 35 milliseconds. <strong>Orange</strong> signals a near-miss: an arrow pointing left (<strong>&lt;</strong>) shows you were early, while an arrow pointing right (<strong>&gt;</strong>) shows you were late. <strong>Red</strong> flags a clear mistake: gross timing offset, striking a rest, or an extra duplicate tap.</p>
+              <p>As the groove starts, hit the spacebar or tap button right in the pocket. The feedback dots tell you the truth immediately through a three-tier tolerance system: <strong>green</strong> rewards a precise hit. <strong>Orange</strong> signals a near-miss: an arrow pointing left (<strong>&lt;</strong>) shows you were early, while an arrow pointing right (<strong>&gt;</strong>) shows you were late. <strong>Red</strong> flags a clear mistake: gross timing offset, striking a rest, or an extra duplicate tap. Remember to calibrate your device in settings for best precision.</p>
             </div>
 
             <div class="help-section">
@@ -2792,7 +3708,7 @@
 
             <div class="help-section">
               <h3>La précision au doigt et à l'œil</h3>
-              <p>Quand le rythme démarre, frappez la barre d'espace ou le bouton au tempo exact. Sous vos doigts, les pastilles vous répondent instantanément selon un système de tolérance à trois niveaux : le <strong>vert</strong> récompense une frappe chirurgicale à 35 millisecondes près. L'<strong>orange</strong> vous signale une frappe proche mais imparfaite : une petite flèche vers la gauche (<strong>&lt;</strong>) indique que vous êtes en avance, tandis qu'une flèche vers la droite (<strong>&gt;</strong>) indique un retard. Le <strong>rouge</strong> sanctionne une erreur franche : frappe trop décalée, coup sur un silence ou frappe en trop.</p>
+              <p>Quand le rythme démarre, frappez la barre d'espace ou le bouton au tempo exact. Sous vos doigts, les pastilles vous répondent instantanément selon un système de tolérance à trois niveaux : le <strong>vert</strong> récompense une frappe précise. L'<strong>orange</strong> vous signale une frappe proche mais imparfaite : une petite flèche vers la gauche (<strong>&lt;</strong>) indique que vous êtes en avance, tandis qu'une flèche vers la droite (<strong>&gt;</strong>) indique un retard. Le <strong>rouge</strong> sanctionne une erreur franche : frappe trop décalée, coup sur un silence ou frappe en trop. Pensez à calibrer votre appareil dans les réglages pour plus de précision.</p>
             </div>
 
             <div class="help-section">
@@ -2990,6 +3906,13 @@
       }, 150);
     }
 
+    openLatencyModalFromScore() {
+      this.closeScoreModal();
+      if (this.latencyCalibrator) {
+        this.latencyCalibrator.open();
+      }
+    }
+
     updateScoreMessage(results) {
       const headlineEl = document.getElementById('score-modal-headline');
       const subtextEl = document.getElementById('score-modal-subtext');
@@ -2998,28 +3921,42 @@
       const correct = results.correct || 0;
       const isAdvancedOrCustom = (this.config.level === 3 || this.config.level === 'custom');
 
+      // Check for consistent timing bias (indicates hardware latency or systematic rushing/dragging)
+      let biasNotice = '';
+      if (this.debugPanel && Array.isArray(this.debugPanel.exerciseTaps) && this.debugPanel.exerciseTaps.length >= 6) {
+        const taps = this.debugPanel.exerciseTaps;
+        const mean = taps.reduce((acc, v) => acc + v, 0) / taps.length;
+
+        // Consistent bias (|mean| >= 18ms)
+        if (Math.abs(mean) >= 18) {
+          biasNotice = (mean < 0)
+            ? `<div class="score-bias-notice" style="margin-top: 10px; font-size: 13px; opacity: 0.95;">${this.t('scoreTextCalibrationAhead')}</div>`
+            : `<div class="score-bias-notice" style="margin-top: 10px; font-size: 13px; opacity: 0.95;">${this.t('scoreTextCalibrationBehind')}</div>`;
+        }
+      }
+
       if (correct === 0) {
         headlineEl.textContent = this.t('scoreHeadlineZero');
-        subtextEl.innerHTML = this.t('scoreTextPractice');
+        subtextEl.innerHTML = this.t('scoreTextPractice') + biasNotice;
       } else if (correct < 7) {
         headlineEl.textContent = this.t('scoreHeadlineLow');
-        subtextEl.innerHTML = this.t('scoreTextPractice');
+        subtextEl.innerHTML = this.t('scoreTextPractice') + biasNotice;
       } else if (correct < 10) {
         if (isAdvancedOrCustom) {
           headlineEl.textContent = this.t('scoreHeadlineAdvanced');
-          subtextEl.innerHTML = this.t('scoreTextAdvanced');
+          subtextEl.innerHTML = this.t('scoreTextAdvanced') + biasNotice;
         } else {
           headlineEl.textContent = this.t('scoreHeadlineGood');
-          subtextEl.innerHTML = this.t('scoreTextDiff');
+          subtextEl.innerHTML = this.t('scoreTextDiff') + biasNotice;
         }
       } else {
         // Perfect score (10/10)
         if (isAdvancedOrCustom) {
           headlineEl.textContent = this.t('scoreHeadlinePerfectAdv');
-          subtextEl.innerHTML = this.t('scoreTextAdvancedPerfect');
+          subtextEl.innerHTML = this.t('scoreTextAdvancedPerfect') + biasNotice;
         } else {
           headlineEl.textContent = this.t('scoreHeadlinePerfect');
-          subtextEl.innerHTML = this.t('scoreTextDiffPerfect');
+          subtextEl.innerHTML = this.t('scoreTextDiffPerfect') + biasNotice;
         }
       }
 
@@ -3032,6 +3969,8 @@
             this.activatePracticeModeFromScore();
           } else if (action === 'difficulty') {
             this.increaseDifficultyFromScore();
+          } else if (action === 'calibrate') {
+            this.openLatencyModalFromScore();
           }
         });
       });
@@ -3201,12 +4140,21 @@
         }
       );
 
+      // Initialize Latency Calibrator
+      this.latencyCalibrator = new LatencyCalibrator(this);
+
       this.bindUiEvents();
       this.initTouchTooltips();
       this.applyLanguage();
       this.updateMetronomeButtonsForDivision(this.config.division);
 
       window.addEventListener('resize', () => this.updateKnuckleTimelines());
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', () => this.updateKnuckleTimelines());
+      }
+      window.addEventListener('orientationchange', () => {
+        setTimeout(() => this.updateKnuckleTimelines(), 150);
+      });
       setTimeout(() => this.updateKnuckleTimelines(), 200);
     }
 
@@ -3377,6 +4325,13 @@
       document.getElementById('btn-close-help')?.addEventListener('click', () => this.closeHelpModal());
       document.getElementById('help-modal-backdrop')?.addEventListener('click', () => this.closeHelpModal());
 
+      // Latency Modal trigger event listener
+      document.getElementById('btn-open-latency-modal')?.addEventListener('click', () => {
+        if (this.latencyCalibrator) {
+          this.latencyCalibrator.open();
+        }
+      });
+
       // Score Modal event listeners
       document.getElementById('score-modal-close-btn')?.addEventListener('click', () => this.closeScoreModal());
       document.getElementById('btn-score-close')?.addEventListener('click', () => this.closeScoreModal());
@@ -3401,6 +4356,9 @@
           this.renderActivePlayingChip(null);
         } else {
           this.closeScoreModal();
+          if (this.debugPanel) {
+            this.debugPanel.resetStats();
+          }
           this.rhythmEngine.start();
           btnToggle.className = 'btn-train-action btn-stop';
           if (btnToggleText) btnToggleText.textContent = this.t('btnStop');
@@ -3436,12 +4394,21 @@
         if (e.code === 'Space') {
           e.preventDefault();
           if (e.repeat) return; // Prevent OS key repeat delays and unwanted duplicate fires
-          triggerTap(e.timeStamp);
+          if (this.latencyCalibrator && this.latencyCalibrator.isOpen) {
+            this.latencyCalibrator.handleTap(e.timeStamp);
+          } else {
+            triggerTap(e.timeStamp);
+          }
         } else if (e.key === 's' || e.key === 'S') {
           e.preventDefault();
+          if (this.latencyCalibrator && this.latencyCalibrator.isOpen) return;
           toggleTraining();
         } else if (e.key === 'Escape') {
           e.preventDefault();
+          if (this.latencyCalibrator && this.latencyCalibrator.isOpen) {
+            this.latencyCalibrator.close();
+            return;
+          }
           const helpModal = document.getElementById('help-modal');
           if (helpModal && !helpModal.classList.contains('hidden')) {
             this.closeHelpModal();
@@ -3943,7 +4910,11 @@
         this.renderActivePlayingChip(state.patternId);
       }
 
-      this.debugPanel.updateStateView(state);
+      const curHand = state.currentHand || 1;
+      this.debugPanel.updateStateView({
+        ...state,
+        completedHands: curHand
+      });
     }
 
     updateKnuckleTimelines() {
@@ -4008,14 +4979,28 @@
 
         // Essential reading zone height (from fingertips to 15px below disks):
         const essentialZoneFromFingers = currentSvgHeight * ((320 - 73) / 480);
-        const fadePadding = 28;
+        const fadePadding = 24;
         const minStageHeight = essentialZoneFromFingers + fadePadding;
 
         // Vertically centered when tall; smoothly eliminate top gap as stage gets squeezed:
-        const squeezeProgress = Math.max(0, Math.min(1, (stageHeight - minStageHeight) / 140));
-        const centeredTopGap = Math.max(0, (stageHeight - hVis) / 2);
-        const targetTopGap = Math.round(centeredTopGap * squeezeProgress);
-        const marginTop = Math.round(targetTopGap - hHead);
+        const spareHeight = stageHeight - hVis;
+        let marginTop = 0;
+
+        if (spareHeight > 60) {
+          // Roomy screen: center the visible hand
+          // On mobile portrait, limit top gap to 36px so palms and bottom zone are not pushed down
+          const maxGap = stageWidth < 500 ? 36 : 90;
+          const centerGap = Math.min(maxGap, Math.round(spareHeight / 2));
+          marginTop = Math.round(centerGap - hHead);
+        } else if (spareHeight > 0) {
+          // Tightening height: smoothly transition from centered to top ceiling
+          const t = spareHeight / 60;
+          const centerGap = Math.round((spareHeight / 2) * t + 4 * (1 - t));
+          marginTop = Math.round(centerGap - hHead);
+        } else {
+          // Squeezed: fingertips touch the top ceiling (gap = 2px)
+          marginTop = Math.round(2 - hHead);
+        }
 
         handsWrapper.style.marginTop = `${marginTop}px`;
 
@@ -4124,6 +5109,7 @@
         deltaMs: evalData.deltaMs,
         rating: evalData.rating
       });
+      this.debugPanel.recordTapEvaluation(evalData);
     }
 
     onDebugTogglesChange(toggles) {

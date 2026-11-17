@@ -61,8 +61,8 @@ export class DebugPanel {
           </div>
           <div id="debug-sec-timing" class="debug-section-body collapsed">
             <div class="debug-slider-row">
-              <label>Perfect Window: <span id="dbg-val-perfect">±35ms</span></label>
-              <input type="range" id="dbg-slider-perfect" min="15" max="65" value="35" step="1">
+              <label>Perfect Window: <span id="dbg-val-perfect">±45ms</span></label>
+              <input type="range" id="dbg-slider-perfect" min="15" max="65" value="45" step="1">
             </div>
             <div class="debug-slider-row">
               <label>Max Window (Early/Late): <span id="dbg-val-max">±85ms</span></label>

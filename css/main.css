@@ -20,14 +20,22 @@
   padding: 0;
 }
 
-html, body {
+html {
+  height: 100%;
+}
+
+body {
   width: 100%;
+  height: 100%;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background-color: var(--bg-primary);
   color: var(--text-main);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   user-select: none;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Ambient Corner Vignette Halo (Discreet: reduced by 50%) */
@@ -57,6 +65,7 @@ body.phase-imitate .vignette-halo {
 
 /* Minimal Top Utility Bar */
 .top-nav-bar {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -227,17 +236,19 @@ body.phase-imitate .vignette-halo {
 
 /* Main Practice Canvas Viewport (100% screen fit, no scrolling) */
 .practice-viewport {
-  height: calc(100vh - 52px);
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 1rem 0.65rem 1rem;
+  padding: 0.2rem 1rem 0.5rem 1rem;
   position: relative;
   overflow: hidden;
 }
 
-/* Hands Stage Container (Top-anchored fingers, smooth palm fade at bottom) */
+/* Hands Stage Container (Smooth palm fade at bottom) */
 .hands-stage-wrapper {
   flex: 1;
   width: 100%;
@@ -249,8 +260,8 @@ body.phase-imitate .vignette-halo {
   position: relative;
   overflow: hidden;
   padding-top: 0;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 38px), transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 38px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 32px), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 32px), transparent 100%);
 }
 
 /* Feedback Timeline Section (Directly above Tap Zone on void background) */
@@ -262,8 +273,8 @@ body.phase-imitate .vignette-halo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.25rem;
-  margin-bottom: 0.65rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
   flex-shrink: 0;
   pointer-events: none;
   z-index: 20;
@@ -277,6 +288,8 @@ body.phase-imitate .vignette-halo {
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
+  flex-shrink: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .tap-button {
@@ -1094,7 +1107,7 @@ body.hands-spotlight .hands-stage-wrapper::after {
   pointer-events: none;
 }
 
-.help-modal, .score-modal {
+.help-modal, .score-modal, .latency-modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1113,13 +1126,13 @@ body.hands-spotlight .hands-stage-wrapper::after {
   transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.help-modal.hidden, .score-modal.hidden {
+.help-modal.hidden, .score-modal.hidden, .latency-modal.hidden {
   opacity: 0;
   transform: translate(-50%, -46%) scale(0.96);
   pointer-events: none;
 }
 
-.help-modal-header, .score-modal-header {
+.help-modal-header, .score-modal-header, .latency-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1128,17 +1141,17 @@ body.hands-spotlight .hands-stage-wrapper::after {
   background: rgba(30, 41, 59, 0.6);
 }
 
-.help-modal-title-wrap {
+.help-modal-title-wrap, .latency-modal-title-wrap {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.help-title-icon {
+.help-title-icon, .latency-title-icon {
   font-size: 20px;
 }
 
-.help-modal-header h2, .score-modal-header h2 {
+.help-modal-header h2, .score-modal-header h2, .latency-modal-header h2 {
   font-size: 17px;
   font-weight: 700;
   color: var(--text-main);
@@ -1170,7 +1183,7 @@ body.hands-spotlight .hands-stage-wrapper::after {
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
-.btn-help-close, .score-modal-close {
+.btn-help-close, .score-modal-close, .btn-latency-close {
   background: none;
   border: none;
   color: var(--text-muted);
@@ -1182,7 +1195,7 @@ body.hands-spotlight .hands-stage-wrapper::after {
   transition: color 150ms ease;
 }
 
-.btn-help-close:hover, .score-modal-close:hover {
+.btn-help-close:hover, .score-modal-close:hover, .btn-latency-close:hover {
   color: var(--text-main);
 }
 
@@ -1423,6 +1436,264 @@ body.hands-spotlight .hands-stage-wrapper::after {
 }
 
 /* ==========================================================================
+   Device Latency Settings & Calibration Modal
+   ========================================================================== */
+.latency-setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.btn-latency-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--accent-cyan);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.btn-latency-trigger:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
+  color: #fff;
+}
+
+.latency-btn-icon {
+  font-size: 16px;
+}
+
+.latency-current-value {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.latency-explainer-text {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 4px;
+  max-width: 440px;
+  padding: 6px 14px;
+  background: rgba(30, 41, 59, 0.45);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.latency-modal-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.latency-beat-indicator-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.latency-beat-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.3);
+  box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  transition: all 80ms ease-out;
+}
+
+.latency-beat-dot.flash {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 16px var(--accent-cyan), 0 0 24px rgba(56, 189, 248, 0.8);
+  transform: scale(1.3);
+}
+
+.latency-bpm-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.latency-instruction-text {
+  font-size: 14.5px;
+  color: #e2e8f0;
+  line-height: 1.55;
+  margin: 0;
+  min-height: 44px;
+  max-width: 440px;
+  transition: color 150ms ease;
+}
+
+.latency-tap-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.btn-latency-tap {
+  width: 170px;
+  height: 74px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 2px solid var(--accent-cyan);
+  border-radius: 14px;
+  color: #f8fafc;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.25);
+  transition: all 100ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-latency-tap:hover {
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+  border-color: #7dd3fc;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.4);
+}
+
+.btn-latency-tap:active, .btn-latency-tap.tap-active {
+  transform: scale(0.94);
+  background: var(--accent-cyan);
+  color: #040810;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.6), 0 0 35px var(--accent-cyan);
+}
+
+.latency-tap-label {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.latency-tap-subhint {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.latency-tap-subhint kbd {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #e2e8f0;
+}
+
+.latency-result-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  min-height: 44px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.latency-result-card.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.latency-result-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.latency-result-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent-green);
+  letter-spacing: 0.5px;
+}
+
+.latency-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(30, 41, 59, 0.6);
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  width: 100%;
+}
+
+.btn-latency-secondary {
+  background: rgba(148, 163, 184, 0.12);
+  color: #e2e8f0;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  cursor: pointer;
+  transition: all 180ms ease;
+  font-family: inherit;
+}
+
+.btn-latency-secondary:hover {
+  background: rgba(148, 163, 184, 0.22);
+}
+
+.btn-latency-primary {
+  background: var(--accent-cyan);
+  color: #040810;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 180ms ease;
+  font-family: inherit;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn-latency-primary:hover {
+  background: #7dd3fc;
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-latency-primary.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========================================================================
    Mobile & Touch Long-Press Tooltips
    ========================================================================== */
 .touch-tooltip-bubble {
@@ -1491,8 +1762,9 @@ body.hands-spotlight .hands-stage-wrapper::after {
     height: 48px;
   }
   .practice-viewport {
-    height: calc(100vh - 48px);
-    padding: 0.15rem 0.35rem 0.5rem 0.35rem;
+    flex: 1;
+    min-height: 0;
+    padding: 0.15rem 0.35rem 0.4rem 0.35rem;
   }
   #lbl-nav-settings {
     display: none;

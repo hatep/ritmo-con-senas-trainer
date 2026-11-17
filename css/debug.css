@@ -255,6 +255,121 @@
   color: #f97316;
 }
 
+/* Statistics & Analytics in Section 4 */
+.debug-grid-3col {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.debug-grid-4col {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.debug-stats-card {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.debug-stats-card-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.btn-dbg-mini {
+  background: rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.btn-dbg-mini:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+.debug-sparkline-row {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(148, 163, 184, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.debug-sparkline-row .lbl {
+  font-size: 9.5px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.debug-sparkline {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 4px;
+  padding: 2px 4px;
+  overflow: hidden;
+}
+
+.spark-bar-slot {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spark-zero-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(148, 163, 184, 0.25);
+  pointer-events: none;
+}
+
+.spark-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  transition: all 120ms ease;
+}
+
+.spark-dot.perfect {
+  background: #22c55e;
+  box-shadow: 0 0 5px #22c55e;
+}
+
+.spark-dot.early {
+  background: #38bdf8;
+  box-shadow: 0 0 4px #38bdf8;
+}
+
+.spark-dot.late {
+  background: #f97316;
+  box-shadow: 0 0 4px #f97316;
+}
+
 /* Conductor Activation Gestures (Section 5) */
 .conductor-presets-list {
   display: flex;

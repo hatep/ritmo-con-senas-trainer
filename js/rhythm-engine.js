@@ -19,8 +19,8 @@ export class RhythmEngine {
     this.repeatOnError = false;
 
     // Timing thresholds (can be tweaked live in Debug HUD)
-    this.thresholdPerfectMs = 35; // |delta| <= 35ms -> Perfect (Green)
-    this.thresholdMaxMs = 85;     // 35ms < |delta| <= 85ms -> Early / Late (Orange/Red)
+    this.thresholdPerfectMs = 45; // |delta| <= 45ms -> Perfect (Green)
+    this.thresholdMaxMs = 85;     // 45ms < |delta| <= 85ms -> Early / Late (Orange/Red)
 
     // State machine
     this.isRunning = false;
